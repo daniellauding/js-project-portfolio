@@ -1,0 +1,45 @@
+{
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": [
+        "HTML5",
+        "CSS3",
+        "JavaScript ES6+",
+        "React",
+        "TypeScript",
+        "Redux",
+        "Next.js",
+        "Tailwind CSS",
+        "Styled Components"
+      ]
+    },
+    {
+      "category": "Backend",
+      "items": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "PostgreSQL",
+        "REST APIs",
+        "GraphQL",
+        "Authentication",
+        "JWT"
+      ]
+    },
+    {
+      "category": "Tools & Others",
+      "items": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "npm/yarn",
+        "Webpack",
+        "Vite",
+        "Jest",
+        "Docker"
+      ]
+    }
+  ]
+}

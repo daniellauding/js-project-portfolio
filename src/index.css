@@ -1,4 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  /* === FONTS === */
+  --title-font-family: 'Montserrat', sans-serif;
+  --text-font-family: 'Hind', sans-serif;
+
+  /* === TITLE SIZES: Fluid Scale up to 80px === */
+  --title-xs: 20px;
+  --title-sm: 24px;
+  --title-md: 32px;
+  --title-lg: 40px;
+  --title-xl: 56px;
+  --title-xxl: 64px;
+  --title-max: 80px;
+
+  /* Fluid title scale example */
+  --title-fluid: clamp(var(--title-md), 6vw, var(--title-max));
+
+  /* === TEXT SIZES === */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-xxl: 24px;
+  --text-huge: 32px;
+
+  /* === FONT WEIGHTS === */
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* === BASE COLORS === */
+  --bg-color: #fff;
+  --title-color: #0b24f5;
+  --text-color: #000000;
+
+  /* === SPACING === */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* === BORDER RADIUS === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-round: 50%;
+
+  /* === SECTION: HERO === */
+  --section-hero-bg-color: var(--bg-color);
+  --section-hero-title-color: var(--title-color);
+  --section-hero-text-color: var(--text-color);
+
+  /* === SECTION: TECH === */
+  --section-tech-bg-color: #0B24F5;
+  --section-tech-title-color: #fff;
+  --section-tech-text-color: #fff;
+
+  /* === SECTION: PROJECTS === */
+  --section-projects-bg-color: #ffffff;
+  --section-projects-title-color: #0B24F5;
+  --section-projects-text-color: #000;
+
+  /* === SECTION: ARTICLES === */
+  --section-articles-bg-color: #FFECEA;
+  --section-articles-title-color: #FF4575;
+  --section-articles-text-color: #000;
+
+  /* === SECTION: SKILLS === */
+  --section-skills-bg-color: #ffffff;
+  --section-skills-title-color: #2d3748;
+  --section-skills-text-color: #4a5568;
+
+  /* === SECTION: FOOTER === */
+  --section-footer-bg-color: #2d3748;
+  --section-footer-title-color: #ffffff;
+  --section-footer-text-color: #cbd5e0;
+}
+
+/* === GLOBAL STYLES === */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
 body {
-  background: pink;
-  color: hotpink;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--text-font-family);
+}
+
+/* === BOX SIZING === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }

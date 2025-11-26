@@ -1,2 +1,2 @@
-  export { Image } from './Image'
-  export { Avatar } from './Avatar'
+export { Image } from './Image.tsx'
+export { Avatar } from './Avatar.tsx'

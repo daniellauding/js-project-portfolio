@@ -1,29 +1,35 @@
-import { Header } from '@/components/Header'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '@/theme'
+import { Hero } from '@/components/Hero'
+import { TechStack } from '@/components/TechStack'
 import { Title, Text } from '@/components/Typography'
 import { Section } from '@/components/Section'
 import { Projects } from '@/components/Projects'
+import { Articles } from '@/components/Articles'
+import { Skills } from '@/components/Skills'
+import { Footer } from '@/components/Footer'
 import aboutData from '@/data/about.json'
 import stackData from '@/data/stack.json'
 import projectsData from '@/data/projects.json'
-
-console.log(projectsData);
+import articlesData from '@/data/articles.json'
+import skillsData from '@/data/skills.json'
+// import footerData from '@/data/footer.json'
 
 export const App = () => {
   return (
-    <>
-      <Header
-        intro={aboutData.intro}
-        role={aboutData.role}
-        desc={aboutData.desc}
-        avatar_url={aboutData.avatar_url}
-      />
+    <ThemeProvider theme={theme}>
+      <Hero data={aboutData} />
 
-      <Section fullWidth innerContainer title={stackData.title} text={stackData.desc} />
+      <TechStack data={stackData} />
 
       <Projects data={projectsData} />
 
-      <Title>Portfolio</Title>
-      <Text>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, laborum! Maxime animi nostrum facilis distinctio neque labore consectetur beatae eum ipsum excepturi voluptatum, dicta repellendus incidunt fugiat, consequatur rem aperiam.</Text>
-    </>
+      <Articles data={articlesData} />
+
+      <Skills data={skillsData} />
+
+      {/* <Footer data={footerData} /> */}
+
+    </ThemeProvider>
   )
 }

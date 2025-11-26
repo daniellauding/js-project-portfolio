@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "Building Scalable React Applications",
+      "excerpt": "Learn the best practices for building large-scale React applications that are maintainable and performant.",
+      "date": "2024-03-15",
+      "image": "/avatar.png",
+      "readTime": "5 min read",
+      "link": "#",
+      "tags": ["React", "JavaScript", "Architecture"]
+    },
+    {
+      "id": "2",
+      "title": "Modern CSS Techniques",
+      "excerpt": "Explore the latest CSS features including Grid, Custom Properties, and Container Queries.",
+      "date": "2024-03-10",
+      "image": "/avatar.png",
+      "readTime": "8 min read",
+      "link": "#",
+      "tags": ["CSS", "Web Design", "Frontend"]
+    },
+    {
+      "id": "3",
+      "title": "TypeScript Best Practices",
+      "excerpt": "A comprehensive guide to writing better TypeScript code with practical examples.",
+      "date": "2024-03-05",
+      "image": "/avatar.png",
+      "readTime": "10 min read",
+      "link": "#",
+      "tags": ["TypeScript", "JavaScript", "Best Practices"]
+    }
+  ]
+}

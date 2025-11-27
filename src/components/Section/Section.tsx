@@ -14,9 +14,16 @@ export const Section = ({
   text,
   id,
   className = '',
+  hideTitle = false,
 }: SectionProps) => {
   const bemClass = `section ${variant ? `section--${variant}` : ''} ${layout ? `section--${layout}` : ''}`.trim()
   const fullClassName = `${bemClass} ${className}`.trim()
+  const titleId = title ? `${id}-title` : undefined;
+  const titleClassName = [
+    "section__title",
+    variant ? `section__title--${variant}` : "",
+    hideTitle ? "sr-only" : ""
+  ].join(" ").trim();
 
   return (
     <StyledSection
@@ -25,6 +32,7 @@ export const Section = ({
       $layout={layout}
       $justifyContent={justifyContent}
       className={fullClassName}
+      aria-labelledby={titleId}
     >
       <Container
         $layout={layout}
@@ -34,7 +42,7 @@ export const Section = ({
         $gap={gap}
         className={`section__container ${variant ? `section__container--${variant}` : ''}`}
       >
-        {title && <Title>{title}</Title>}
+        {title && <Title id={titleId} size="huge" as="h2" className={titleClassName}>{title}</Title>}
         {text && <Text>{text}</Text>}
         {children}
       </Container>

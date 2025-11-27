@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Image } from '@/components/Image'
 
 export const ArticlesContainer = styled.div`
   display: flex;
@@ -28,16 +29,22 @@ export const ArticleCard = styled.article`
   }
 `
 
-export const ArticleImage = styled.div<{ $backgroundImage: string }>`
+export const ArticleImage = styled.div`
+  position: relative;
   width: 408px;
-  height: 280px;
-  background-image: url(${props => props.$backgroundImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  max-width: 408px;
+  aspect-ratio: 408 / 280;
+  overflow: hidden;
   border-left: 20px solid var(--section-articles-title-color);
   border-bottom: 20px solid var(--section-articles-title-color);
 `
+
+export const StyledImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+`;
 
 export const ArticleContent = styled.div`
   padding: var(--spacing-none);
@@ -56,23 +63,6 @@ export const ArticleDate = styled.div`
   font-weight: var(--weight-medium);
   width: fit-content;
   margin-bottom: var(--spacing-md);
-`
-
-export const ArticleTitle = styled.h3`
-  font-family: var(--title-font-family);
-  font-size: var(--title-sm);
-  font-weight: var(--weight-bold);
-  color: var(--text-color) !important;
-  margin: 0 0 var(--spacing-md) 0;
-`
-
-export const ArticleExcerpt = styled.p`
-  font-family: var(--text-font-family);
-  font-size: var(--text-md);
-  color: var(--text-color);
-  line-height: 1.6;
-  margin: 0 0 var(--spacing-lg) 0;
-  flex: 1;
 `
 
 export const ArticleFooter = styled.div`

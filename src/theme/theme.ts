@@ -13,6 +13,7 @@ export const theme = {
     lg: 'var(--title-lg)', // 40px
     xl: 'var(--title-xl)', // 48px
     xxl: 'var(--title-xxl)', // 56px
+    huge: 'var(--title-huge)', // 80px
   },
 
   // Font sizes - Text
@@ -23,7 +24,7 @@ export const theme = {
     lg: 'var(--text-lg)', // 18px
     xl: 'var(--text-xl)', // 20px
     xxl: 'var(--text-xxl)', // 24px
-    huge: ''
+    huge: 'var(--text-huge)', // 32px
   },
 
   // Font weights

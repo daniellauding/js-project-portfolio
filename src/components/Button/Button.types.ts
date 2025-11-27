@@ -16,4 +16,7 @@ export type ButtonProps = {
   iconOnly?: boolean
   target?: string
   className?: string
+  ariaLabel?: string;
+  ariaDescribedBy?: string;
+  loading?: boolean;
 }

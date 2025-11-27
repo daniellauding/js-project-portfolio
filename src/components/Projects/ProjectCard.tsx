@@ -1,13 +1,13 @@
 import { Icon } from '@/components/Icon'
+import { Text, Title } from '@/components/Typography'
+import { Tag } from '@/components/Tag/Tag'
 import { ProjectCardProps } from './Projects.types'
 import {
   ProjectCard as Card,
   ProjectImage,
+  StyledImage,
   ProjectContent,
-  ProjectTitle,
-  ProjectDescription,
   ProjectTags,
-  ProjectTag,
   ProjectActions,
   ProjectLink
 } from './Projects.styled'
@@ -21,34 +21,40 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
   if (!hasContent) return null
 
   return (
-    <Card role="listitem" {...props}>
+    <Card className="project-card" role="listitem" {...props}>
       {image && (
-        <ProjectImage 
-          $backgroundImage={image} 
-          role="img"
-          aria-label={`Screenshot of ${name || 'project'}`}
-        />
+        <ProjectImage className="project-card__media">
+          <StyledImage
+            src={image}
+            alt={`Screenshot of ${name || 'project'}`}
+            className="project-card__image"
+          />
+        </ProjectImage>
       )}
-      <ProjectContent>
+      <ProjectContent className="project-card__content">
         {name && (
-          <ProjectTitle role="heading" aria-level={3}>
+          <Title size="md" weight="semibold" className="project-card__title" color="#000000" as="h3">
             {name}
-          </ProjectTitle>
+          </Title>
         )}
         {description && (
-          <ProjectDescription aria-describedby={name ? `${name}-description` : undefined}>
+           <Text size="lg" weight="light" className="project-card__desc">
             {description}
-          </ProjectDescription>
+           </Text>
         )}
         {tags && tags.length > 0 && (
           <ProjectTags 
             role="list" 
             aria-label="Technologies used"
+            className="project-card__tags"
           >
             {tags.map((tag, index) => (
-              <ProjectTag key={index} role="listitem">
+              <Tag 
+                key={index} 
+                className="project-card__tag"
+              >
                 {tag}
-              </ProjectTag>
+              </Tag>
             ))}
           </ProjectTags>
         )}

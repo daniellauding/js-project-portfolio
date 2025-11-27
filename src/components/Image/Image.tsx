@@ -5,15 +5,18 @@ interface ImageProps {
   width?: string | number
   height?: string | number
   [key: string]: unknown
+  decorative?: boolean;
+  loading?: 'lazy' | 'eager';
 }
 
-export const Image = ({ src, alt, size, width, height, ...props }: ImageProps) => {
+export const Image = ({ src, alt, size, width, height, decorative = false, loading = 'lazy', ...props }: ImageProps) => {
   return (
     <img
       src={src}
-      alt={alt || 'Image'}
-      width={width || size || 50}
-      height={height || size || 50}
+      alt={decorative ? '' : (alt || 'Image')}
+      loading={loading}
+      {...(width ? { width } : {})}
+      {...(height ? { height } : {})}
       {...props}
     />
   )

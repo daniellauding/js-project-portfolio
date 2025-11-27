@@ -28,6 +28,8 @@ export const Hero = ({ data }: HeroProps) => {
       aria-label="Hero section"
       gap="xxl"
       justifyContent="flex-end"
+      title="About me"
+      hideTitle={true}
     >
       <HeroGrid>
         {avatar_url && (
@@ -37,13 +39,16 @@ export const Hero = ({ data }: HeroProps) => {
                 alt={name ? `${name}'s profile picture` : 'Profile picture'}
                 width="164px"
                 height="164px"
+                className="section__avatar"
+                role="img"
+                aria-label={name ? `${name}'s profile picture` : 'Profile picture'}
               />
           </HeroAvatar>
         )}
 
         {intro && (
           <HeroIntro>
-            <Title size="md" weight="medium" className="hero__intro" color="#000000">
+            <Title size="md" as="h3" weight="medium" className="section__title section__title--intro" color="#000000">
               {intro}
             </Title>
           </HeroIntro>
@@ -51,7 +56,7 @@ export const Hero = ({ data }: HeroProps) => {
 
         {role && (
           <HeroRole>
-            <Title size="xl" color="#0B24F5" className="hero__role">
+            <Title size="xl" as="h3" color="#0B24F5" className="section__title section__title--role">
               {role}
             </Title>
           </HeroRole>
@@ -62,12 +67,12 @@ export const Hero = ({ data }: HeroProps) => {
             <div role="region" aria-label="About">
               {Array.isArray(desc) ? (
                 desc.map((p, i) => (
-                  <Text key={i} size="lg" className="hero__desc">
+                  <Text key={i} size="lg" className="section__desc">
                     {p}
                   </Text>
                 ))
               ) : (
-                <Text size="lg" className="hero__desc">
+                <Text size="lg" className="section__desc">
                   {desc}
                 </Text>
               )}
@@ -76,7 +81,7 @@ export const Hero = ({ data }: HeroProps) => {
         )}
       </HeroGrid>
 
-      <HeroScrollButton href="#tech" aria-label="Scroll to tech section">
+      <HeroScrollButton href="#tech" aria-label="Scroll to tech section" className="section__scroll--button">
         <Icon name="ArrowDown" />
       </HeroScrollButton>
     </Section>

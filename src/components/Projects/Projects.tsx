@@ -15,8 +15,8 @@ export const Projects = ({ data }: ProjectsProps) => {
       variant="projects" 
       id="projects"
       aria-label="Featured projects showcase"
+      title="Featured Projects"
     >
-      <Title size="xxl">Featured Projects</Title>
       <ProjectsContainer 
         role="list"
         aria-label={`${projects.length} featured projects`}

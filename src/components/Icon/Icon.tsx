@@ -10,7 +10,6 @@ const StyledIcon = styled.div<{
   align-items: center;
   justify-content: center;
 
-  /* Sizes */
   width: ${props => {
     if (props.$size === 's') return '16px'
     if (props.$size === 'l') return '32px'
@@ -23,7 +22,6 @@ const StyledIcon = styled.div<{
     return '24px'
   }};
 
-  /* Custom size */
   ${props =>
     props.$customSize &&
     `
@@ -31,10 +29,8 @@ const StyledIcon = styled.div<{
     height: ${props.$customSize};
   `}
 
-  /* Color */
   color: ${props => props.$color || 'inherit'};
 
-  /* SVG styling */
   svg {
     width: 100%;
     height: 100%;
@@ -48,6 +44,9 @@ interface IconProps {
   customSize?: string
   color?: string
   [key: string]: unknown
+  decorative?: boolean;
+  title?: string;
+  ariaLabel?: string;
 }
 
 export const Icon = ({
@@ -55,6 +54,9 @@ export const Icon = ({
   size = 'm',
   customSize,
   color,
+  decorative = false,
+  title,
+  ariaLabel,
   ...props
 }: IconProps) => {
   const iconSvg = (icons as Record<string, string>)[name]
@@ -69,6 +71,10 @@ export const Icon = ({
       $size={size}
       $customSize={customSize}
       $color={color}
+      role={decorative ? 'presentation' : 'img'}
+      aria-hidden={decorative}
+      aria-label={!decorative ? ariaLabel : undefined}
+      title={title}
       {...props}
       dangerouslySetInnerHTML={{ __html: iconSvg }}
     />

@@ -15,8 +15,8 @@ export const Articles = ({ data }: ArticlesProps) => {
       variant="articles" 
       id="articles"
       aria-label="Recent articles and blog posts"
+      title="My words"
     >
-      <Title size="lg">My words</Title>
       <ArticlesContainer 
         role="list"
         aria-label={`${articles.length} recent articles`}

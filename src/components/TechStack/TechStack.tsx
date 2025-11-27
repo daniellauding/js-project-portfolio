@@ -19,16 +19,12 @@ export const TechStack = ({ data }: TechStackProps) => {
       gap="xxl"
       justifyContent="center"
       id="tech"
-      aria-labelledby="tech-heading"
-      role="region"
     >
       {title && (
         <Title 
           size="xl" 
-          id="tech-heading"
-          role="heading" 
-          aria-level={2}
-          className="techstack__title"
+          as="h2"
+          className="section__title section__title--tech"
         >
           {title}
         </Title>
@@ -37,8 +33,7 @@ export const TechStack = ({ data }: TechStackProps) => {
       {desc && (
         <Text 
           size="huge" 
-          className="techstack__desc"
-          aria-describedby={title ? "tech-heading" : undefined}
+          className="section__text section__desc section__desc--tech"
         >
           {desc}
         </Text>
@@ -46,4 +41,3 @@ export const TechStack = ({ data }: TechStackProps) => {
     </Section>
   )
 }
-

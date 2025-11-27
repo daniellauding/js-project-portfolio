@@ -8,7 +8,14 @@ export const Text = ({
   color,
   align = 'left',
   className = '',
-}: TypographyProps) => {
+  role,
+  ariaDescribedby,
+  ariaLevel,
+  ...rest
+}: TypographyProps & { 
+  role?: string
+  // Support common aria props via ...rest
+}) => {
   // BEM classname
   const bemClass = `text text--${size} text--${weight} text--${align}`
   const fullClassName = `${bemClass} ${className}`.trim()
@@ -20,6 +27,10 @@ export const Text = ({
       $color={color}
       $align={align}
       className={fullClassName}
+      role={role}
+      aria-level={ariaLevel}
+      aria-describedby={ariaDescribedby}
+      {...rest}
     >
       {children}
     </StyledText>

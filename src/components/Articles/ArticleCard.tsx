@@ -1,21 +1,22 @@
 import { Icon } from '@/components/Icon'
+import { Text, Title } from '@/components/Typography'
 import { ArticleCardProps } from './Articles.types'
 import {
   ArticleCard as Card,
   ArticleImage,
+  StyledImage,
   ArticleContent,
   ArticleDate,
   ArticleTitle,
   ArticleExcerpt,
   ArticleFooter,
-  ArticleReadTime,
   ArticleLink
 } from './Articles.styled'
 
 export const ArticleCard = ({ article, ...props }: ArticleCardProps) => {
   if (!article) return null
 
-  const { title, excerpt, date, image, readTime, link } = article
+  const { title, excerpt, date, image, link } = article
 
   const hasContent = title || excerpt || image
   if (!hasContent) return null
@@ -29,31 +30,35 @@ export const ArticleCard = ({ article, ...props }: ArticleCardProps) => {
   }
 
   return (
-    <Card role="article" {...props}>
+    <Card className="article-card" {...props}>
       {image && (
-        <ArticleImage 
-          $backgroundImage={image} 
-          role="img"
-          aria-label={`Screenshot of ${title || 'article'}`}
-        />
+        <ArticleImage className="article-card__media">
+          <StyledImage
+            src={image}
+            alt={`Screenshot of ${title || 'article'}`}
+            className="article-card__image"
+          />
+        </ArticleImage>
       )}
-      <ArticleContent>
+      <ArticleContent className="article-card__content">
         {date && (
-          <ArticleDate>
-            {formatDate(date)}
+          <ArticleDate className="article-card__date">
+            <Text size="sm" color="#fff" weight="light" className="article-card__date-text">
+              {formatDate(date)}
+            </Text>
           </ArticleDate>
         )}
         
         {title && (
-          <ArticleTitle>
+          <Title size="md" weight="semibold" className="article-card__title" color="#000000" as="h3">
             {title}
-          </ArticleTitle>
+          </Title>
         )}
         
         {excerpt && (
-          <ArticleExcerpt>
+          <Text size="lg" weight="light" className="article-card__desc">
             {excerpt}
-          </ArticleExcerpt>
+          </Text>
         )}
 
       </ArticleContent>

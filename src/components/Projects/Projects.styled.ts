@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Image } from '@/components/Image'
 
 export const ProjectsContainer = styled.div`
   display: flex;
@@ -29,16 +30,22 @@ export const ProjectCard = styled.article`
   }
 `
 
-export const ProjectImage = styled.div<{ $backgroundImage: string }>`
+export const ProjectImage = styled.div`
+  position: relative;
   width: 408px;
-  height: 280px;
-  background-image: url(${props => props.$backgroundImage});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  max-width: 408px;
+  aspect-ratio: 408 / 280;
+  overflow: hidden;
   border-left: 20px solid var(--section-projects-title-color);
   border-bottom: 20px solid var(--section-projects-title-color);
 `
+
+export const StyledImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+`;
 
 export const ProjectContent = styled.div`
   padding: var(--spacing-lg);
@@ -47,22 +54,22 @@ export const ProjectContent = styled.div`
   flex-direction: column;
 `
 
-export const ProjectTitle = styled.h3`
-  font-family: var(--title-font-family);
-  font-size: var(--title-sm);
-  font-weight: var(--weight-bold);
-  color: var(--text-color) !important;
-  margin: 0 0 var(--spacing-md) 0;
-`
+// export const ProjectTitle = styled.h3`
+//   font-family: var(--title-font-family);
+//   font-size: var(--title-sm);
+//   font-weight: var(--weight-bold);
+//   color: var(--text-color) !important;
+//   margin: 0 0 var(--spacing-md) 0;
+// `
 
-export const ProjectDescription = styled.p`
-  font-family: var(--text-font-family);
-  font-size: var(--text-md);
-  color: var(--text-color);
-  line-height: 1.6;
-  margin: 0 0 var(--spacing-lg) 0;
-  flex: 1;
-`
+// export const ProjectDescription = styled.p`
+//   font-family: var(--text-font-family);
+//   font-size: var(--text-md);
+//   color: var(--text-color);
+//   line-height: 1.6;
+//   margin: 0 0 var(--spacing-lg) 0;
+//   flex: 1;
+// `
 
 export const ProjectTags = styled.div`
   display: flex;

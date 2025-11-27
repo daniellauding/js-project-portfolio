@@ -14,6 +14,9 @@ export const Button = ({
   iconOnly = false,
   target,
   className = '',
+  ariaLabel,
+  ariaDescribedBy,
+  loading,
 }: ButtonProps) => {
   // BEM classname
   const bemClass = `button button--${variant} button--${size} ${fullWidth ? 'button--full' : ''} ${iconOnly ? 'button--icon-only' : ''}`.trim()
@@ -24,7 +27,12 @@ export const Button = ({
 
     if (typeof icon === 'string') {
       return (
-        <span className="button__icon">
+        <span
+          className="button__icon"
+          aria-label={iconOnly ? ariaLabel || 'Button' : undefined}
+          aria-describedby={ariaDescribedBy}
+          aria-busy={loading}
+        >
           <Icon name={icon} />
         </span>
       )

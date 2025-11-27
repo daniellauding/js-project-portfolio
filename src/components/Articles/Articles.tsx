@@ -18,7 +18,7 @@ export const Articles = ({ data }: ArticlesProps) => {
       title="My words"
     >
       <ArticlesContainer 
-        role="list"
+        role="grid"
         aria-label={`${articles.length} recent articles`}
       >
         {articles.map((article) => (

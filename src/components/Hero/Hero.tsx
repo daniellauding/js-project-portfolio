@@ -82,7 +82,7 @@ export const Hero = ({ data }: HeroProps) => {
       </HeroGrid>
 
       <HeroScrollButton href="#tech" aria-label="Scroll to tech section" className="section__scroll--button">
-        <Icon name="ArrowDown" />
+        <Icon name="ArrowDown" decorative />
       </HeroScrollButton>
     </Section>
   )

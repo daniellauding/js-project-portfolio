@@ -30,7 +30,7 @@ export const ArticleCard = ({ article, ...props }: ArticleCardProps) => {
   }
 
   return (
-    <Card className="article-card" {...props}>
+    <Card className="article-card" role="row" {...props}>
       {image && (
         <ArticleImage className="article-card__media">
           <StyledImage

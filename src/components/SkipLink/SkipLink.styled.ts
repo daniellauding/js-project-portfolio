@@ -32,4 +32,8 @@ export const StyledSkipLink = styled.a`
   &:focus:hover {
     background-color: #0920d9;
   }
+  &:focus-visible {
+    outline: 2px solid ${props => props.theme.colors.primary};
+    outline-offset: 2px;
+  }
 `;

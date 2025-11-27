@@ -8,11 +8,12 @@ interface CardProps {
   tags?: string[]
   netlify?: string
   github?: string
+  role?: string
 }
 
-export const Card = ({ image, title, desc, tags, netlify, github }: CardProps) => {
+export const Card = ({ image, title, desc, tags, netlify, github, role }: CardProps) => {
   return (
-    <div>
+    <div role={role}>
       {image && <Image src={image} alt="Thumbnail" />}
       {title && <Title>{title}</Title>}
       {desc && <Text>{desc}</Text>}

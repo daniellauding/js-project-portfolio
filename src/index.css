@@ -11,17 +11,14 @@
   --color-tertiary: #0B24F5;
   --color-icon: #D0D0D0;
 
-  /* === TITLE SIZES: Fluid Scale up to 80px === */
+  /* === TITLE SIZES === */
   --title-xs: 20px;
   --title-sm: 24px;
   --title-md: 32px;
   --title-lg: 40px;
-  --title-xl: 56px;
+  --title-xl: 80px;
   --title-xxl: 64px;
   --title-huge: 80px;
-
-  /* Fluid title scale example */
-  --title-fluid: clamp(var(--title-md), 6vw, var(--title-max));
 
   /* === TEXT SIZES === */
   --text-xs: 12px;
@@ -51,6 +48,7 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
+  --spacing-huge: 124px;
 
   /* === BORDER RADIUS === */
   --radius-sm: 4px;
@@ -87,6 +85,52 @@
   --section-footer-bg-color: ##fff;
   --section-footer-title-color: var(--title-color);
   --section-footer-text-color: var(--text-color);
+}
+
+/* === TABLET BREAKPOINT (768px - 1023px) === */
+@media (max-width: 1023px) {
+  :root {
+    /* Title sizes for tablet */
+    --title-xs: 18px;
+    --title-sm: 20px;
+    --title-md: 24px;
+    --title-lg: 32px;
+    --title-xl: 56px;
+    --title-xxl: 64px;
+    --title-huge: 80px;
+
+    /* Text sizes for tablet */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-md: 16px;
+    --text-lg: 18px;
+    --text-xl: 18px;
+    --text-xxl: 20px;
+    --text-huge: 28px;
+  }
+}
+
+/* === MOBILE BREAKPOINT (<768px) === */
+@media (max-width: 767px) {
+  :root {
+    /* Title sizes for mobile */
+    --title-xs: 16px;
+    --title-sm: 16px;
+    --title-md: 18px;
+    --title-lg: 20px;
+    --title-xl: 24px;
+    --title-xxl: 28px;
+    --title-huge: 32px;
+
+    /* Text sizes for mobile */
+    --text-xs: 11px;
+    --text-sm: 13px;
+    --text-md: 14px;
+    --text-lg: 16px;
+    --text-xl: 17px;
+    --text-xxl: 18px;
+    --text-huge: 24px;
+  }
 }
 
 /* === GLOBAL STYLES === */

@@ -61,30 +61,28 @@ export const Hero = ({ data }: HeroProps) => {
         )}
 
         {desc && (
-          <HeroDesc>
-            <div role="region" aria-label="About">
-              {Array.isArray(desc) ? (
-                desc.map((p, i) => (
-                  <Text key={i} size="lg" className="section__desc">
-                    {p}
-                  </Text>
-                ))
-              ) : (
-                <Text size="lg" className="section__desc">
-                  {desc}
+          <HeroDesc role="region" aria-label="About">
+            {Array.isArray(desc) ? (
+              desc.map((p, i) => (
+                <Text key={i} weight="light" size="lg" className="section__desc">
+                  {p}
                 </Text>
-              )}
-            </div>
+              ))
+            ) : (
+              <Text size="lg" weight="light" className="section__desc">
+                {desc}
+              </Text>
+            )}
           </HeroDesc>
         )}
       </HeroGrid>
-
 
       <Button
         href="#tech"
         aria-label="Scroll to tech section"
         className="section__scroll--button"
         variant="ghost"
+        iconColor="var(--color-secondary)"
         icon="ArrowDown"
         size="lg"
         iconOnly

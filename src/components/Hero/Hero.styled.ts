@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HeroGrid = styled.div`
   display: grid;
   width: 100%;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xs);
 
   grid-template-columns: 1fr;
   grid-template-areas:
@@ -31,6 +31,11 @@ export const HeroGrid = styled.div`
 
 export const HeroAvatar = styled.div`
   grid-area: avatar;
+  margin-left: auto;
+  margin-right: auto;
+  ${props => props.theme.media.tablet} {
+    margin-right: var(--spacing-md);
+  }
 `
 
 export const HeroIntro = styled.div`
@@ -39,10 +44,14 @@ export const HeroIntro = styled.div`
 
 export const HeroRole = styled.div`
   grid-area: role;
+  margin-bottom: var(--spacing-md);
 `
 
 export const HeroDesc = styled.div`
   grid-area: desc;
+  gap: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
 `
 
 

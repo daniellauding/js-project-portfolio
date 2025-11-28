@@ -16,7 +16,7 @@ export const TechStack = ({ data }: TechStackProps) => {
       layout="full"
       flexDirection="row"
       alignItems="center"
-      gap="xxl"
+      gap="huge"
       justifyContent="center"
       id="tech"
     >

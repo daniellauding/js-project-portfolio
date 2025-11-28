@@ -20,4 +20,5 @@ export type ButtonProps = {
   ariaDescribedBy?: string;
   loading?: boolean;
   rel?: string;
+  iconColor?: string;
 }

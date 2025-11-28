@@ -14,7 +14,6 @@ export const Text = ({
   ...rest
 }: TypographyProps & { 
   role?: string
-  // Support common aria props via ...rest
 }) => {
   // BEM classname
   const bemClass = `text text--${size} text--${weight} text--${align}`

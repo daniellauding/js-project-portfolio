@@ -88,6 +88,7 @@ export const theme = {
     lg: 'var(--spacing-lg)', // 24px
     xl: 'var(--spacing-xl)', // 32px
     xxl: 'var(--spacing-xxl)', // 48px
+    huge: 'var(--spacing-huge)', // 124px
   },
 
   // Border radius - references CSS variables

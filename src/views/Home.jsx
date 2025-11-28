@@ -14,24 +14,26 @@ import skillsData from '@/data/skills.json'
 
 export const Home = () => (
   <>
-    <SkipLink href="#main-content">Skip to main content</SkipLink>
-    <SkipLink href="#tech">Skip to technologies</SkipLink>
-    <SkipLink href="#projects">Skip to projects</SkipLink>
-    <SkipLink href="#articles">Skip to articles</SkipLink>
-    <SkipLink href="#skills">Skip to skills</SkipLink>
-    <SkipLink href="#footer">Skip to contact</SkipLink>
+    <header id="header">
+      <SkipLink href="#main-content">Skip to main content</SkipLink>
+      <SkipLink href="#tech">Skip to technologies</SkipLink>
+      <SkipLink href="#projects">Skip to projects</SkipLink>
+      <SkipLink href="#articles">Skip to articles</SkipLink>
+      <SkipLink href="#skills">Skip to skills</SkipLink>
+      <SkipLink href="#footer">Skip to contact</SkipLink>
 
-    <Title as="h1" className="sr-only">
-      Daniel Lauding - Frontend Developer Portfolio
-    </Title>
-    
-    <main id="main-content">
+      <Title as="h1" className="sr-only">
+        Daniel Lauding - Frontend Developer Portfolio
+      </Title>
+
       <Hero data={aboutData} />
+    </header>
+    <main id="main-content">
       <TechStack data={stackData} />
       <Projects data={projectsData} />
       <Articles data={articlesData} />
       <Skills data={skillsData} />
-      <Footer data={aboutData} />
     </main>
+    <Footer data={aboutData} />
   </>
 )

@@ -17,7 +17,8 @@ export const Button = ({
   ariaLabel,
   ariaDescribedBy,
   loading,
-  rel
+  rel,
+  iconColor
 }: ButtonProps) => {
   // BEM classname
   const bemClass = `button button--${variant} button--${size} ${fullWidth ? 'button--full' : ''} ${iconOnly ? 'button--icon-only' : ''}`.trim()
@@ -34,7 +35,7 @@ export const Button = ({
           aria-describedby={ariaDescribedBy}
           aria-busy={loading}
         >
-          <Icon name={icon} />
+          <Icon name={icon} color={iconColor} />
         </span>
       )
     }

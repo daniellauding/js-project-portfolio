@@ -99,10 +99,13 @@ export const Container = styled.div<StyledProps>`
   margin: 0 auto;
   width: 100%;
   display: flex;
-
-  gap: var(--spacing-${props => props.$gap || 'md'});
-
-  flex-direction: ${props => props.$flexDirection || 'column'};
+  flex-direction: column;
+  gap: var(--spacing-md);
+  
+  ${props => props.theme.media.desktop} {
+    gap: var(--spacing-${props => props.$gap || 'xxl'});
+    flex-direction: ${props => props.$flexDirection || 'column'};
+  }
 
   ${props => props.$alignItems && `align-items: ${props.$alignItems};`}
 

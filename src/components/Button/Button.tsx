@@ -17,6 +17,7 @@ export const Button = ({
   ariaLabel,
   ariaDescribedBy,
   loading,
+  rel
 }: ButtonProps) => {
   // BEM classname
   const bemClass = `button button--${variant} button--${size} ${fullWidth ? 'button--full' : ''} ${iconOnly ? 'button--icon-only' : ''}`.trim()
@@ -59,6 +60,7 @@ export const Button = ({
         $fullWidth={fullWidth}
         $iconOnly={iconOnly}
         className={fullClassName}
+        rel={rel}
       >
         {content}
       </StyledButton>
@@ -74,6 +76,7 @@ export const Button = ({
       $fullWidth={fullWidth}
       $iconOnly={iconOnly}
       className={fullClassName}
+      rel={rel}
     >
       {content}
     </StyledButton>

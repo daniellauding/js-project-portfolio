@@ -1,7 +1,7 @@
 import { Section } from '@/components/Section'
+import { Button } from '@/components/Button'
 import { Avatar } from '@/components/Image'
 import { Text, Title } from '@/components/Typography'
-import { Icon } from '@/components/Icon'
 import { HeroProps } from './Hero.types'
 import { 
   HeroGrid, 
@@ -9,7 +9,6 @@ import {
   HeroIntro, 
   HeroRole,
   HeroDesc,
-  HeroScrollButton 
 } from './Hero.styled'
 
 export const Hero = ({ data }: HeroProps) => {
@@ -30,6 +29,7 @@ export const Hero = ({ data }: HeroProps) => {
       justifyContent="flex-end"
       title="About me"
       hideTitle={true}
+      alignItems="center"
     >
       <HeroGrid>
         {avatar_url && (
@@ -40,8 +40,6 @@ export const Hero = ({ data }: HeroProps) => {
                 width="164px"
                 height="164px"
                 className="section__avatar"
-                role="img"
-                aria-label={name ? `${name}'s profile picture` : 'Profile picture'}
               />
           </HeroAvatar>
         )}
@@ -81,9 +79,17 @@ export const Hero = ({ data }: HeroProps) => {
         )}
       </HeroGrid>
 
-      <HeroScrollButton href="#tech" aria-label="Scroll to tech section" className="section__scroll--button">
-        <Icon name="ArrowDown" decorative />
-      </HeroScrollButton>
+
+      <Button
+        href="#tech"
+        aria-label="Scroll to tech section"
+        className="section__scroll--button"
+        variant="ghost"
+        icon="ArrowDown"
+        size="lg"
+        iconOnly
+      />
+      
     </Section>
   )
 }

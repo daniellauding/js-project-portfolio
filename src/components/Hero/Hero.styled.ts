@@ -45,37 +45,4 @@ export const HeroDesc = styled.div`
   grid-area: desc;
 `
 
-export const HeroScrollButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  padding: 12px;
-  margin-top: var(--spacing-lg);
-  align-self: center;
-
-  background: transparent;
-  color: #ff4575;
-  border: 0px;
-  border-radius: 50%;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-
-  svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  &:hover {
-    transform: translateY(4px);
-  }
-
-  &:focus-visible {
-    outline: 2px solid #ff4575;
-    outline-offset: 2px;
-  }
-`
-
 

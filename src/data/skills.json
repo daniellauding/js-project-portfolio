@@ -40,6 +40,20 @@
         "Jest",
         "Docker"
       ]
+    },
+    {
+      "category": "More",
+      "items": [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Figma",
+        "npm/yarn",
+        "Webpack",
+        "Vite",
+        "Jest",
+        "Docker"
+      ]
     }
   ]
 }

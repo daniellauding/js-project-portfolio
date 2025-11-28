@@ -5,6 +5,12 @@
   --title-font-family: 'Montserrat', sans-serif;
   --text-font-family: 'Hind', sans-serif;
 
+  /* === BRAND === */
+  --color-primary: #0B24F5;
+  --color-secondary: #FF4575;
+  --color-tertiary: #0B24F5;
+  --color-icon: #D0D0D0;
+
   /* === TITLE SIZES: Fluid Scale up to 80px === */
   --title-xs: 20px;
   --title-sm: 24px;
@@ -73,14 +79,14 @@
   --section-articles-text-color: #000;
 
   /* === SECTION: SKILLS === */
-  --section-skills-bg-color: #ffffff;
-  --section-skills-title-color: #2d3748;
-  --section-skills-text-color: #4a5568;
+  --section-skills-bg-color: #0B24F5;
+  --section-skills-title-color: #fff;
+  --section-skills-text-color: #fff;
 
   /* === SECTION: FOOTER === */
-  --section-footer-bg-color: #2d3748;
-  --section-footer-title-color: #ffffff;
-  --section-footer-text-color: #cbd5e0;
+  --section-footer-bg-color: ##fff;
+  --section-footer-title-color: var(--title-color);
+  --section-footer-text-color: var(--text-color);
 }
 
 /* === GLOBAL STYLES === */
@@ -115,4 +121,24 @@ body {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.secondary {
+  color: var(--color-secondary);
+}
+
+.tertiary {
+  color: var(--color-tertiary);
+}
+
+.icon, .icon span {
+  color: var(--color-icon);
+}
+
+a:hover.icon, a:hover.icon span {
+  color: var(--title-color);
 }

@@ -19,4 +19,5 @@ export type ButtonProps = {
   ariaLabel?: string;
   ariaDescribedBy?: string;
   loading?: boolean;
+  rel?: string;
 }

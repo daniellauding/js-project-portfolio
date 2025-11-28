@@ -41,6 +41,9 @@ export const theme = {
     title: 'var(--title-color)',
     text: 'var(--text-color)',
     primary: 'var(--title-color)',
+    secondary: 'var(--color-secondary)',
+    tertiary: 'var(--color-tertiary)',
+    icon: 'var(--color-icon)',
   },
 
   // Section variants

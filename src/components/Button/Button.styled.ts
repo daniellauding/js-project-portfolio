@@ -83,6 +83,8 @@ export const StyledButton = styled.button<StyledProps>`
   ${props => props.$iconOnly && `
     padding: var(--spacing-sm);
     aspect-ratio: 1;
+    width: 48px;
+    height: 48px;
   `}
 
   /* === STATES === */

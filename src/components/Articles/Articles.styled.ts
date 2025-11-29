@@ -54,8 +54,8 @@ export const ArticleContent = styled.div`
 `
 
 export const ArticleDate = styled.div`
-  background: #000;
-  color: white;
+  background: var(--text-color);
+  color: var(--bg-color);
   padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);

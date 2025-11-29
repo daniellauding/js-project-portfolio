@@ -13,14 +13,14 @@ export const StyleGuideContainer = styled.div`
 export const Navigation = styled.nav`
   position: sticky;
   top: var(--spacing-lg);
-  background: #f8f9fa;
+  background: var(--card-bg);
   border-radius: var(--radius-lg);
   padding: var(--spacing-md);
   margin: var(--spacing-xl) 0;
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-sm);
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   z-index: 100;
   
   ${props => props.theme.media.mobile} {
@@ -30,8 +30,8 @@ export const Navigation = styled.nav`
 
 export const NavItem = styled.a`
   padding: var(--spacing-xs) var(--spacing-sm);
-  background: white;
-  border: 1px solid #dee2e6;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   text-decoration: none;
   color: var(--text-color);
@@ -41,7 +41,7 @@ export const NavItem = styled.a`
   
   &:hover {
     background: var(--title-color);
-    color: white;
+    color: var(--bg-color);
     border-color: var(--title-color);
   }
   
@@ -54,7 +54,7 @@ export const NavItem = styled.a`
 export const ComponentSection = styled.section`
   margin: var(--spacing-xxl) 0;
   padding-top: var(--spacing-lg);
-  border-top: 1px solid #e9ecef;
+  border-top: 1px solid var(--border-color);
   
   &:first-of-type {
     border-top: none;
@@ -74,11 +74,11 @@ export const ExampleGrid = styled.div`
 `;
 
 export const ExampleCard = styled.div`
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--card-bg);
+  box-shadow: 0 2px 4px var(--card-shadow);
   
   h3 {
     margin-top: 0;
@@ -87,13 +87,13 @@ export const ExampleCard = styled.div`
   
   p {
     margin-bottom: var(--spacing-md);
-    color: #6c757d;
+    color: var(--text-muted);
   }
 `;
 
 export const Preview = styled.div`
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: var(--spacing-lg);
   margin: var(--spacing-md) 0;
@@ -118,8 +118,8 @@ export const Preview = styled.div`
 
 export const CodeBlock = styled.div`
   position: relative;
-  background: #f1f3f4;
-  border: 1px solid #d0d7de;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   overflow: hidden;
   
@@ -127,7 +127,7 @@ export const CodeBlock = styled.div`
     margin: 0;
     padding: var(--spacing-md);
     background: none;
-    color: #24292f;
+    color: var(--text-color);
     font-family: 'SF Mono', Monaco, Inconsolata, 'Roboto Mono', Consolas, 'Courier New', monospace;
     font-size: var(--text-sm);
     line-height: 1.5;
@@ -142,7 +142,7 @@ export const CopyButton = styled.button`
   right: var(--spacing-sm);
   padding: var(--spacing-xs) var(--spacing-sm);
   background: var(--title-color);
-  color: white;
+  color: var(--bg-color);
   border: none;
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
@@ -151,7 +151,7 @@ export const CopyButton = styled.button`
   transition: all 0.2s ease;
   
   &:hover {
-    background: #0920d9;
+    opacity: 0.9;
   }
   
   &:active {
@@ -159,11 +159,11 @@ export const CopyButton = styled.button`
   }
   
   &.copied {
-    background: #28a745;
+    background: var(--color-tertiary);
   }
   
   &:focus-visible {
-    outline: 2px solid white;
+    outline: 2px solid var(--bg-color);
     outline-offset: -2px;
   }
 `;
@@ -174,22 +174,22 @@ export const PropsTable = styled.div`
   table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: var(--card-bg);
     border-radius: var(--radius-md);
     overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px var(--card-shadow);
   }
   
   th, td {
     padding: var(--spacing-sm) var(--spacing-md);
     text-align: left;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid var(--border-color);
   }
   
   th {
-    background: #f8f9fa;
+    background: var(--bg-color);
     font-weight: var(--weight-semibold);
-    color: #495057;
+    color: var(--text-muted);
     font-size: var(--text-sm);
   }
   
@@ -200,21 +200,21 @@ export const PropsTable = styled.div`
   
   td:first-child {
     font-family: 'SF Mono', Monaco, monospace;
-    background: #f1f3f4;
+    background: var(--bg-color);
     font-weight: var(--weight-medium);
-    color: #d73a49;
+    color: var(--color-secondary);
   }
   
   td:nth-child(2) {
     font-family: 'SF Mono', Monaco, monospace;
     font-size: var(--text-xs);
-    color: #6f42c1;
+    color: var(--color-primary);
   }
   
   td:nth-child(3) {
     font-family: 'SF Mono', Monaco, monospace;
     font-size: var(--text-xs);
-    color: #28a745;
+    color: var(--color-tertiary);
   }
   
   tbody tr:last-child td {
@@ -222,7 +222,7 @@ export const PropsTable = styled.div`
   }
   
   tbody tr:hover {
-    background: #f8f9fa;
+    background: var(--bg-color);
   }
 `;
 
@@ -237,15 +237,15 @@ export const ColorSwatch = styled.div<{ $color: string }>`
   background: ${props => props.$color};
   height: 80px;
   border-radius: var(--radius-md);
-  border: 1px solid #e9ecef;
+  border: 1px solid var(--border-color);
   display: flex;
   align-items: flex-end;
   position: relative;
   
   &::after {
     content: '${props => props.$color}';
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
+    background: var(--text-color);
+    color: var(--bg-color);
     padding: var(--spacing-xs);
     font-size: var(--text-xs);
     font-family: 'SF Mono', Monaco, monospace;

@@ -26,19 +26,19 @@ export const CategoryHeader = styled.div`
   border-radius: var(--radius-sm);
   
   &.code {
-    background: #ff4575;
+    background: var(--color-secondary);
   }
   
   &.toolbox {
-    background: #4f9cf9;
+    background: var(--color-primary);
   }
   
   &.upcoming {
-    background: #7cb342;
+    background: var(--color-tertiary);
   }
   
   &.more {
-    background: #ffa726;
+    background: var(--color-secondary);
   }
 `
 
@@ -46,7 +46,7 @@ export const CategoryTitle = styled.h3`
   font-family: var(--title-font-family);
   font-size: var(--title-sm);
   font-weight: var(--weight-bold);
-  color: white;
+  color: var(--bg-color);
   margin: 0;
   text-transform: capitalize;
 `
@@ -63,6 +63,6 @@ export const SkillsList = styled.ul`
 export const SkillItem = styled.li`
   font-family: var(--text-font-family);
   font-size: var(--text-md);
-  color: white;
+  color: var(--section-skills-text-color);
   text-align: left;
 `

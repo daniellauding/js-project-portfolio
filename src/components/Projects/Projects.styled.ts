@@ -18,15 +18,17 @@ export const ProjectsContainer = styled.div`
 `
 
 export const ProjectCard = styled.article`
-  background: white;
+  background: var(--card-bg);
   border-radius: var(--radius-none);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: row;
+  box-shadow: 0 2px 8px var(--card-shadow);
 
   &:hover {
     transform: translateY(-4px);
+    box-shadow: 0 4px 12px var(--card-shadow);
   }
 `
 
@@ -79,8 +81,8 @@ export const ProjectTags = styled.div`
 `
 
 export const ProjectTag = styled.span`
-  background: #000;
-  color: #fff;
+  background: var(--text-color);
+  color: var(--bg-color);
   padding: var(--spacing-xs) var(--spacing-xs);
   border-radius: var(--radius-none);
   font-size: var(--text-sm);

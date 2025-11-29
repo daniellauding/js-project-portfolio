@@ -10,19 +10,22 @@ export const StyledTag = styled.span<{
   padding: var(--spacing-xs) var(--spacing-sm);
   background-color: ${props => 
     props.$selected ? 'var(--title-color)' : 
-    props.$disabled ? '#e0e0e0' : 
-    '#f0f0f0'
+    props.$disabled ? 'var(--border-color)' : 
+    'var(--card-bg)'
+  };
+  border: 1px solid ${props => 
+    props.$selected ? 'var(--title-color)' : 'var(--border-color)'
   };
   border-radius: 12px;
   line-height: 1;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   opacity: ${props => props.$disabled ? 0.6 : 1};
 
   /* Text color override for selected/disabled states */
   .tag__text {
     color: ${props => 
-      props.$selected ? '#ffffff' : 
-      props.$disabled ? '#999999' : 
+      props.$selected ? 'var(--bg-color)' : 
+      props.$disabled ? 'var(--text-muted)' : 
       'inherit'
     } !important;
   }
@@ -30,7 +33,7 @@ export const StyledTag = styled.span<{
   ${props => (props.$clickable && !props.$disabled) && `
     &:hover {
       background-color: ${
-        props.$selected ? 'var(--title-color)' : '#e0e0e0'
+        props.$selected ? 'var(--title-color)' : 'var(--border-color)'
       };
     }
   `}

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
+/* === LIGHT THEME (DEFAULT) === */
 :root {
   /* === FONTS === */
   --title-font-family: 'Montserrat', sans-serif;
@@ -9,7 +10,46 @@
   --color-primary: #0B24F5;
   --color-secondary: #FF4575;
   --color-tertiary: #0B24F5;
-  --color-icon: #D0D0D0;
+  --color-icon: #6B7280;
+  
+  /* === BASE COLORS === */
+  --bg-color: #ffffff;
+  --title-color: #0B24F5;
+  --text-color: #1F2937;
+  --text-muted: #6B7280;
+  --border-color: #E5E7EB;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  
+  /* === SECTION: HERO === */
+  --section-hero-bg-color: var(--bg-color);
+  --section-hero-title-color: var(--title-color);
+  --section-hero-text-color: var(--text-color);
+
+  /* === SECTION: TECH === */
+  --section-tech-bg-color: #0B24F5;
+  --section-tech-title-color: #ffffff;
+  --section-tech-text-color: #ffffff;
+
+  /* === SECTION: PROJECTS === */
+  --section-projects-bg-color: #ffffff;
+  --section-projects-title-color: #0B24F5;
+  --section-projects-text-color: var(--text-color);
+
+  /* === SECTION: ARTICLES === */
+  --section-articles-bg-color: #FFECEA;
+  --section-articles-title-color: #FF4575;
+  --section-articles-text-color: var(--text-color);
+
+  /* === SECTION: SKILLS === */
+  --section-skills-bg-color: #0B24F5;
+  --section-skills-title-color: #ffffff;
+  --section-skills-text-color: #ffffff;
+
+  /* === SECTION: FOOTER === */
+  --section-footer-bg-color: #ffffff;
+  --section-footer-title-color: var(--title-color);
+  --section-footer-text-color: var(--text-color);
 
   /* === TITLE SIZES === */
   --title-xs: 20px;
@@ -36,11 +76,6 @@
   --weight-semibold: 600;
   --weight-bold: 700;
 
-  /* === BASE COLORS === */
-  --bg-color: #fff;
-  --title-color: #0b24f5;
-  --text-color: #000000;
-
   /* === SPACING === */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
@@ -55,34 +90,52 @@
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-round: 50%;
+}
 
+/* === DARK THEME === */
+[data-theme="dark"] {
+  /* === BRAND === */
+  --color-primary: #5B70FF;
+  --color-secondary: #FF6B8F;
+  --color-tertiary: #5B70FF;
+  --color-icon: #9CA3AF;
+  
+  /* === BASE COLORS === */
+  --bg-color: #111827;
+  --title-color: #5B70FF;
+  --text-color: #E5E7EB;
+  --text-muted: #9CA3AF;
+  --border-color: #374151;
+  --card-bg: #1F2937;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  
   /* === SECTION: HERO === */
   --section-hero-bg-color: var(--bg-color);
   --section-hero-title-color: var(--title-color);
   --section-hero-text-color: var(--text-color);
 
   /* === SECTION: TECH === */
-  --section-tech-bg-color: #0B24F5;
-  --section-tech-title-color: #fff;
-  --section-tech-text-color: #fff;
+  --section-tech-bg-color: #1E3A8A;
+  --section-tech-title-color: #E5E7EB;
+  --section-tech-text-color: #E5E7EB;
 
   /* === SECTION: PROJECTS === */
-  --section-projects-bg-color: #ffffff;
-  --section-projects-title-color: #0B24F5;
-  --section-projects-text-color: #000;
+  --section-projects-bg-color: #111827;
+  --section-projects-title-color: #5B70FF;
+  --section-projects-text-color: var(--text-color);
 
   /* === SECTION: ARTICLES === */
-  --section-articles-bg-color: #FFECEA;
-  --section-articles-title-color: #FF4575;
-  --section-articles-text-color: #000;
+  --section-articles-bg-color: #2D1B1F;
+  --section-articles-title-color: #FF6B8F;
+  --section-articles-text-color: var(--text-color);
 
   /* === SECTION: SKILLS === */
-  --section-skills-bg-color: #0B24F5;
-  --section-skills-title-color: #fff;
-  --section-skills-text-color: #fff;
+  --section-skills-bg-color: #1E3A8A;
+  --section-skills-title-color: #E5E7EB;
+  --section-skills-text-color: #E5E7EB;
 
   /* === SECTION: FOOTER === */
-  --section-footer-bg-color: ##fff;
+  --section-footer-bg-color: #111827;
   --section-footer-title-color: var(--title-color);
   --section-footer-text-color: var(--text-color);
 }

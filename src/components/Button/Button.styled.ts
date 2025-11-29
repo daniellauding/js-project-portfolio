@@ -37,7 +37,7 @@ export const StyledButton = styled.button<StyledProps>`
 
   /* Default: primary */
   background: ${props => props.theme.colors.primary};
-  color: white;
+  color: var(--bg-color);
   border-color: ${props => props.theme.colors.primary};
 
   &:hover:not(:disabled) {
@@ -46,9 +46,9 @@ export const StyledButton = styled.button<StyledProps>`
 
   /* Secondary variant */
   ${props => props.$variant === 'secondary' && `
-    background: #000000;
-    color: white;
-    border-color: #000000;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
   `}
 
   /* Outline variant */
@@ -59,7 +59,7 @@ export const StyledButton = styled.button<StyledProps>`
     
     &:hover:not(:disabled) {
       background: ${props.theme.colors.primary};
-      color: white;
+      color: var(--bg-color);
     }
   `}
 
@@ -70,7 +70,7 @@ export const StyledButton = styled.button<StyledProps>`
     border-color: transparent;
     
     &:hover:not(:disabled) {
-      background: rgba(11, 36, 245, 0.1);
+      background: var(--card-shadow);
     }
   `}
 

@@ -8,7 +8,7 @@ export const StyledSkipLink = styled.a`
   
   /* Styling */
   background-color: var(--title-color);
-  color: #ffffff;
+  color: var(--bg-color);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-sm);
   font-family: var(--text-font-family);
@@ -30,7 +30,7 @@ export const StyledSkipLink = styled.a`
   
   /* Hover state when visible */
   &:focus:hover {
-    background-color: #0920d9;
+    opacity: 0.9;
   }
   &:focus-visible {
     outline: 2px solid ${props => props.theme.colors.primary};

@@ -5,7 +5,7 @@ export const ContactInfo = styled.div`
 `
 
 export const ContactLink = styled.a`
-  color: #000;
+  color: var(--text-color);
   text-decoration: none;
   
   &:hover {
@@ -13,7 +13,7 @@ export const ContactLink = styled.a`
   }
   
   &:focus {
-    outline: 2px solid #0b24f5;
+    outline: 2px solid var(--title-color);
     outline-offset: 2px;
   }
 `
@@ -23,15 +23,15 @@ export const SocialLinks = styled.ul`
   justify-content: center;
   gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
-  color: #D0D0D0;
+  color: var(--color-icon);
   list-style: none;
   margin: 0;
   padding: 0;
 `
 
 export const FooterMarquee = styled.div`
-  background: #ff4575;
-  color: white;
+  background: var(--color-secondary);
+  color: var(--bg-color);
   padding: var(--spacing-md) 0;
   overflow: hidden;
   white-space: nowrap;

@@ -15,7 +15,7 @@ import {
 export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
   if (!project) return null
 
-  const { name, description, image, tags, netlify, github } = project
+  const { name, description, image, tags, netlify, github, date } = project
 
   const hasContent = name || description || image
   if (!hasContent) return null
@@ -33,9 +33,23 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
       )}
       <ProjectContent className="project-card__content">
         {name && (
-          <Title size="md" weight="semibold" className="project-card__title" color="#000000" as="h3">
-            {name}
-          </Title>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
+            <Title size="md" weight="semibold" className="project-card__title" color="#000000" as="h3" style={{ margin: 0 }}>
+              {name}
+            </Title>
+            {date && (
+              <span style={{
+                padding: '0.25rem 0.625rem',
+                fontSize: '0.75rem',
+                borderRadius: '12px',
+                backgroundColor: '#f0f0f0',
+                color: '#666',
+                fontWeight: '500'
+              }}>
+                {date}
+              </span>
+            )}
+          </div>
         )}
         {description && (
            <Text size="lg" weight="light" className="project-card__desc">

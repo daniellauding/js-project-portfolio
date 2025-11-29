@@ -17,7 +17,8 @@
         "Bootstrap",
         "Styled Components",
         "LESS/SASS",
-        "Expo"
+        "Expo",
+        "Storybook"
       ]
     },
     {
@@ -50,12 +51,16 @@
         "REST APIs",
         "GraphQL",
         "WordPress",
+        "Headless CMS",
+        "EPiServer",
+        "Polopoly CMS",
         "Git/GitHub",
         "Docker",
         "Vite",
         "Webpack",
         "DNS Management",
-        "Hosting Services"
+        "Hosting Services",
+        "Google APIs"
       ]
     },
     {

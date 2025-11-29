@@ -1,47 +1,45 @@
 {
   "projects": [
     {
-      "name": "IKEA Stimulanspaketresan (2009)",
-      "description": "Frontend development for IKEA's Sweden tour campaign website. Built interactive experience following IKEA's 10-day caravan journey from Älmhult to Stockholm. Featured behind-the-scenes content, travel diary, and interactive elements. Pixel-perfect implementation from Photoshop designs with IE6/7/8 compatibility and cross-browser CSS optimization.",
-      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2497&q=80",
-      "tags": ["HTML5", "CSS3", "JavaScript", "IE6 Compatibility", "Campaign Site"],
-      "netlify": "www.stimulanspaketresan.se",
+      "name": "Energiforsk - Energieffektiv webb",
+      "date": "2025",
+      "description": "Frontend development consultant for Sweden's most energy-efficient website, achieving 75% lighter page loads than previous site. Built with Next.js and headless CMS using code splitting and minification. Implemented Storybook design system components as part of the team creating sustainable web architecture hosted on fossil-free servers.",
+      "image": "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["Next.js", "Storybook", "Headless CMS", "Sustainability", "Performance"],
+      "netlify": "energieffektivwebb.se",
       "github": "link"
     },
     {
-      "name": "IKEA.se/tv (2009)",
-      "description": "Frontend development for IKEA's user-generated content platform where customers shared interior design tips through videos and images. Built interactive features for video upload, rating system, and commenting functionality. Implemented responsive video player and social interaction features using JavaScript and CSS.",
-      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2497&q=80",
-      "tags": ["HTML5", "CSS3", "JavaScript", "Video Platform", "User-Generated Content"],
-      "netlify": "www.ikea.se/tv",
+      "name": "Gavlegårdarna - Housing Platform",
+      "date": "2025",
+      "description": "Frontend development for Sweden's largest public housing company serving 30,000 residents. Built Vue.js frontend with WordPress backend, featuring apartment search with advanced filtering, booking systems, and accessible user portal. Implemented WCAG AA compliance and modern UX design.",
+      "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["Vue.js", "WordPress", "WCAG AA", "Real Estate", "User Portal"],
+      "netlify": "gavlegardarna.se",
       "github": "link"
     },
     {
-      "name": "100% Ren Hårdträning (2009)",
-      "description": "Frontend development for Stockholm County Council's anti-doping campaign website. Built interactive training platform featuring Musse Hasselvall demonstrating proper workout techniques. Developed engaging web experience to promote clean training over illegal performance enhancers. Collaborated with large creative team including Flash animations and web development.",
-      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2497&q=80",
-      "tags": ["HTML5", "CSS3", "JavaScript", "Flash", "Campaign Site"],
-      "netlify": "hundraprocent.com",
+      "name": "Edenred - Benefits Platform",
+      "date": "2025",
+      "description": "Frontend development for unified lunch and wellness benefits platform. Migrated from Episerver to WordPress, integrated Google APIs, and built responsive Vue.js components for seamless user experience across desktop and mobile.",
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["Vue.js", "WordPress", "Google APIs", "Platform Migration", "Benefits"],
+      "netlify": "edenred.se",
       "github": "link"
     },
     {
-      "name": "mktwebb - 40 Newspaper Platform (2007-2009)",
-      "description": "Interface Developer for Sweden's largest shared technical platform serving 40+ local newspapers under mktmedia. Built scalable frontend architecture using Polopoly CMS with 3000+ lines of CSS and extensive IE6 compatibility. Led JavaScript development and mentored team members. Collaborated with backend programmers, UX researchers, and designers to deliver cost-effective digital publishing solution.",
-      "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=2497&q=80",
-      "tags": ["Polopoly CMS", "JavaScript", "CSS3", "IE6 Compatibility", "Large Scale Platform"],
-      "netlify": "mktwebb.se",
-      "github": "link"
-    },
-    {
-      "name": "Svenska Ishockeyförbundet (2009)",
-      "description": "Frontend development for Swedish Ice Hockey Federation's complete website redesign (www.swehockey.se). Built modern, scalable frontend on EPiServer platform as part of Swedish Sports Federation's unified digital infrastructure. Delivered fresh design with improved usability and commercial functionality. Focused on long-term maintainability and cross-browser compatibility.",
-      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=2497&q=80",
-      "tags": ["EPiServer", "HTML5", "CSS3", "JavaScript", "Sports Federation"],
-      "netlify": "www.swehockey.se",
-      "github": "link"
+      "name": "Christmas JS Calendar Challenges",
+      "date": "2025",
+      "description": "A dynamic weather application for Swedish cities using SMHI API, featuring real-time forecasts, geolocation support, and theme switching based on conditions. Includes 7-day predictions, sunrise/sunset times, and animated weather effects.",
+      "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?auto=format&fit=crop&w=2370&q=80",
+      "tags": ["HTML5", "CSS3", "TypeScript", "SMHI API", "Geolocation API"],
+      "netlify": "link",
+      "github": "link",
+      "codepen": "https://codepen.io/daniellauding/pen/gbPXLVR"
     },
     {
       "name": "Responsive Real Estate Landing Page",
+      "date": "2024",
       "description": "A modern, minimal landing page for a Stockholm apartment rental featuring responsive design, CSS Grid layouts, automated review carousels, and a validated inquiry form. Built with Apple-inspired aesthetics and mobile-first approach.",
       "image": "https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?auto=format&fit=crop&w=2497&q=80",
       "tags": ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
@@ -50,6 +48,7 @@
     },
     {
       "name": "Accessible Quiz Application",
+      "date": "2024",
       "description": "An interactive quiz application with full accessibility support, featuring keyboard navigation, ARIA labels, and WCAG compliance. Fetches quiz data from API with category filtering, instant feedback, and score tracking.",
       "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?auto=format&fit=crop&w=2370&q=80",
       "tags": ["TypeScript", "Tailwind CSS", "REST API", "HTML5", "Accessibility (WCAG)"],
@@ -58,6 +57,7 @@
     },
     {
       "name": "Dynamic Recipe Discovery App",
+      "date": "2024",
       "description": "A data-driven recipe application integrating Spoonacular API with advanced filtering, sorting, and search capabilities. Features include favorites system with localStorage persistence, smart caching, and a sliding filter sidebar.",
       "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?auto=format&fit=crop&w=2370&q=80",
       "tags": ["JavaScript (ES6+)", "Spoonacular API", "LocalStorage API", "HTML5", "CSS3"],
@@ -66,6 +66,7 @@
     },
     {
       "name": "TypeScript Weather Forecast App",
+      "date": "2024",
       "description": "A dynamic weather application for Swedish cities using SMHI API, featuring real-time forecasts, geolocation support, and theme switching based on conditions. Includes 7-day predictions, sunrise/sunset times, and animated weather effects.",
       "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?auto=format&fit=crop&w=2370&q=80",
       "tags": ["HTML5", "CSS3", "TypeScript", "SMHI API", "Geolocation API"],
@@ -73,13 +74,67 @@
       "github": "link"
     },
     {
-      "name": "Christmas 2025 JS calendar challenges",
-      "description": "A dynamic weather application for Swedish cities using SMHI API, featuring real-time forecasts, geolocation support, and theme switching based on conditions. Includes 7-day predictions, sunrise/sunset times, and animated weather effects.",
-      "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?auto=format&fit=crop&w=2370&q=80",
-      "tags": ["HTML5", "CSS3", "TypeScript", "SMHI API", "Geolocation API"],
-      "netlify": "link",
-      "github": "link",
-      "codepen": "https://codepen.io/daniellauding/pen/gbPXLVR"
+      "name": "TinyChat",
+      "date": "2010",
+      "description": "WordPress blog development for TinyChat platform. Created custom WordPress theme and implemented blog functionality for the video chat service's content platform. Focused on clean design, SEO optimization, and content management features.",
+      "image": "https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["WordPress", "Blog Development", "PHP", "CSS3", "Content Management"],
+      "netlify": "tinychat.com",
+      "github": "link"
+    },
+    {
+      "name": "FEI - International Equestrian Federation",
+      "date": "2010",
+      "description": "Frontend development for the International Equestrian Federation's official website. Built responsive layouts for event calendars, competition results, and athlete profiles. Implemented multilingual support and accessibility features for global audience reach.",
+      "image": "https://images.unsplash.com/photo-1553531889-3836a7ee6d3f?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["HTML5", "CSS3", "JavaScript", "Sports Federation", "Multilingual"],
+      "netlify": "fei.org",
+      "github": "link"
+    },
+    {
+      "name": "IKEA Stimulanspaketresan",
+      "date": "2009",
+      "description": "Frontend development for IKEA's Sweden tour campaign website. Built interactive experience following IKEA's 10-day caravan journey from Älmhult to Stockholm. Featured behind-the-scenes content, travel diary, and interactive elements. Pixel-perfect implementation from Photoshop designs with IE6/7/8 compatibility and cross-browser CSS optimization.",
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["HTML5", "CSS3", "JavaScript", "IE6 Compatibility", "Campaign Site"],
+      "netlify": "www.stimulanspaketresan.se",
+      "github": "link"
+    },
+    {
+      "name": "IKEA.se/tv",
+      "date": "2009",
+      "description": "Frontend development for IKEA's user-generated content platform where customers shared interior design tips through videos and images. Built interactive features for video upload, rating system, and commenting functionality. Implemented responsive video player and social interaction features using JavaScript and CSS.",
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["HTML5", "CSS3", "JavaScript", "Video Platform", "User-Generated Content"],
+      "netlify": "www.ikea.se/tv",
+      "github": "link"
+    },
+    {
+      "name": "100% Ren Hårdträning",
+      "date": "2009",
+      "description": "Frontend development for Stockholm County Council's anti-doping campaign website. Built interactive training platform featuring Musse Hasselvall demonstrating proper workout techniques. Developed engaging web experience to promote clean training over illegal performance enhancers. Collaborated with large creative team including Flash animations and web development.",
+      "image": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["HTML5", "CSS3", "JavaScript", "Flash", "Campaign Site"],
+      "netlify": "hundraprocent.com",
+      "github": "link"
+    },
+    {
+      "name": "Svenska Ishockeyförbundet",
+      "date": "2009",
+      "description": "Frontend development for Swedish Ice Hockey Federation's complete website redesign (www.swehockey.se). Built modern, scalable frontend on EPiServer platform as part of Swedish Sports Federation's unified digital infrastructure. Delivered fresh design with improved usability and commercial functionality. Focused on long-term maintainability and cross-browser compatibility.",
+      "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["EPiServer", "HTML5", "CSS3", "JavaScript", "Sports Federation"],
+      "netlify": "www.swehockey.se",
+      "github": "link"
+    },
+    {
+      "name": "mktwebb - 40 Newspaper Platform",
+      "date": "2007-2009",
+      "description": "Interface Developer for Sweden's largest shared technical platform serving 40+ local newspapers under mktmedia. Built scalable frontend architecture using Polopoly CMS with 3000+ lines of CSS and extensive IE6 compatibility. Led JavaScript development and mentored team members. Collaborated with backend programmers, UX researchers, and designers to deliver cost-effective digital publishing solution.",
+      "image": "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=2497&q=80",
+      "tags": ["Polopoly CMS", "JavaScript", "CSS3", "IE6 Compatibility", "Large Scale Platform"],
+      "netlify": "mktwebb.se",
+      "github": "link"
     }
   ]
 }

@@ -4,7 +4,7 @@
       "company": "Fröjd Interactive",
       "role": "Frontend Design Consultant",
       "period": "2025",
-      "description": "Supported Fröjd Interactive as a frontend design consultant, contributing to client projects involving React, Vue, Next.js, Storybook, and WordPress. Collaborated with design and development teams to implement responsive, component-based UIs while maintaining alignment with brand and accessibility standards. Delivered UI improvements and helped maintain shared design systems across multiple active projects.",
+      "description": "Frontend consultant delivering sustainable web solutions for major Swedish organizations. Implemented Storybook design system components for Energiforsk's energy-efficient website using Next.js, contributing to 75% lighter page loads. Built Vue.js frontend for Gavlegårdarna's housing platform serving 30,000 residents with WCAG AA compliance. Developed Edenred's benefits platform migration from Episerver to WordPress with Google API integration.",
       "type": "contract"
     },
     {
@@ -39,7 +39,7 @@
       "company": "Drumedar",
       "role": "Frontend Developer",
       "period": "2008-2009",
-      "description": "Designed and developed campaign websites for Swedish media and sports organizations during the IE6 era. Led frontend development for Svenska Ishockeyförbundet (Swedish Ice Hockey Federation) website redesign on EPiServer platform. Built mktwebb - a shared technical platform serving 40+ newspapers under mktmedia, Sweden's largest local newspaper consortium. Mastered pixel-perfect implementations from Photoshop designs, writing 3000+ lines of CSS. Specialized in Polopoly CMS, browser compatibility for IE6/7/8, and mentored team members on JavaScript development.",
+      "description": "Frontend developer on teams building campaign websites for Swedish media and sports organizations during the IE6 era. Contributed to Svenska Ishockeyförbundet (Swedish Ice Hockey Federation) website redesign on EPiServer platform. Part of the team building mktwebb - a shared technical platform serving 40+ newspapers under mktmedia, Sweden's largest local newspaper consortium. Mastered pixel-perfect implementations from Photoshop designs, writing 3000+ lines of CSS. Specialized in HTML/CSS development with Polopoly CMS and ensured browser compatibility for IE6/7/8.",
       "type": "fulltime"
     }
   ],

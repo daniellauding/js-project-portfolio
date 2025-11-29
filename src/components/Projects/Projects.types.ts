@@ -5,6 +5,8 @@ export interface Project {
   tags: string[]
   netlify: string
   github: string
+  date?: string
+  codepen?: string
 }
 
 export interface ProjectsData {

@@ -2,33 +2,23 @@
   "articles": [
     {
       "id": "1",
-      "title": "Building Scalable React Applications",
-      "excerpt": "Learn the best practices for building large-scale React applications that are maintainable and performant.",
-      "date": "2024-03-15",
+      "title": "My Path Wasn't Linear, But It Makes Sense Now",
+      "excerpt": "A reflection on my unconventional journey from pixel-perfect IE6 implementations to modern React development, and how every detour added value to my skillset.",
+      "date": "2025-01-15",
       "image": "/avatar.png",
-      "readTime": "5 min read",
-      "link": "#",
-      "tags": ["React", "JavaScript", "Architecture"]
+      "readTime": "7 min read",
+      "link": "https://medium.com/@daniellauding/my-path-wasnt-linear-but-it-makes-sense-now-408dc1aeb47e",
+      "tags": ["Career", "Frontend", "Personal Growth"]
     },
     {
       "id": "2",
-      "title": "Modern CSS Techniques",
-      "excerpt": "Explore the latest CSS features including Grid, Custom Properties, and Container Queries.",
-      "date": "2024-03-10",
+      "title": "From Lego Bricks to Digital Products: My Journey as a Builder",
+      "excerpt": "How my childhood passion for building with Lego blocks evolved into crafting digital experiences, and why the fundamental joy of creation remains the same.",
+      "date": "2025-01-10",
       "image": "/avatar.png",
-      "readTime": "8 min read",
-      "link": "#",
-      "tags": ["CSS", "Web Design", "Frontend"]
-    },
-    {
-      "id": "3",
-      "title": "TypeScript Best Practices",
-      "excerpt": "A comprehensive guide to writing better TypeScript code with practical examples.",
-      "date": "2024-03-05",
-      "image": "/avatar.png",
-      "readTime": "10 min read",
-      "link": "#",
-      "tags": ["TypeScript", "JavaScript", "Best Practices"]
+      "readTime": "6 min read",
+      "link": "https://medium.com/@daniellauding/from-lego-bricks-to-digital-products-my-journey-as-a-builder-51a07ac6624e",
+      "tags": ["Design", "Development", "Creativity"]
     }
   ]
 }

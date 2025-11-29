@@ -51,6 +51,11 @@
   --section-footer-title-color: var(--title-color);
   --section-footer-text-color: var(--text-color);
 
+  /* === SECTION: CV === */
+  --section-cv-bg-color: #F5F5F7;
+  --section-cv-title-color: var(--title-color);
+  --section-cv-text-color: var(--text-color);
+
   /* === TITLE SIZES === */
   --title-xs: 20px;
   --title-sm: 24px;
@@ -138,6 +143,11 @@
   --section-footer-bg-color: #111827;
   --section-footer-title-color: var(--title-color);
   --section-footer-text-color: var(--text-color);
+
+  /* === SECTION: CV === */
+  --section-cv-bg-color: #1F2937;
+  --section-cv-title-color: var(--title-color);
+  --section-cv-text-color: var(--text-color);
 }
 
 /* === TABLET BREAKPOINT (768px - 1023px) === */

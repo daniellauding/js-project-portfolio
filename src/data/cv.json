@@ -1,0 +1,77 @@
+{
+  "experience": [
+    {
+      "company": "Fröjd Interactive",
+      "role": "Frontend Design Consultant",
+      "period": "2025",
+      "description": "Supported Fröjd Interactive as a frontend design consultant, contributing to client projects involving React, Vue, Next.js, Storybook, and WordPress. Collaborated with design and development teams to implement responsive, component-based UIs while maintaining alignment with brand and accessibility standards. Delivered UI improvements and helped maintain shared design systems across multiple active projects.",
+      "type": "contract"
+    },
+    {
+      "company": "instinctly AB",
+      "role": "Frontend Developer & Design Consultant",
+      "period": "2017-Present",
+      "description": "Running frontend development consultancy specializing in React, TypeScript, Next.js, and modern JavaScript frameworks. Leading frontend development projects throughout 2025 with focus on component-driven architecture, performance optimization, and accessibility. Working extensively with AI-assisted development tools like Cursor and ChatGPT to accelerate development workflows and deliver high-quality responsive web applications.",
+      "type": "founder"
+    },
+    {
+      "company": "Asteria AB",
+      "role": "Frontend Developer & Product Designer",
+      "period": "2017-2025",
+      "description": "Co-founded fintech startup where I handled all frontend design implementation and development using React and implemented design systems with Storybook. Built the entire frontend design for Smart Cash Flow platform, creating reusable components and establishing development workflows. Combined product design and frontend development to rapidly prototype and iterate on features.",
+      "type": "founder"
+    },
+    {
+      "company": "Valla Media",
+      "role": "Frontend Developer",
+      "period": "2010",
+      "description": "Worked on one of Scandinavia's biggest online bingo platforms. Developed frontend features using HTML, CSS and worked closely with developers and designers implementing responsive layouts. Used Bootstrap framework and Adobe Photoshop for frontend asset optimization.",
+      "type": "parttime"
+    },
+    {
+      "company": "Futurniture (IKEA Projects)",
+      "role": "Frontend Developer",
+      "period": "2009",
+      "description": "Created campaign websites and portals for major clients including IKEA and Duni. Built custom WordPress themes and developed interactive frontend experiences for IKEA's marketing campaigns. Focused on clean HTML/CSS implementation, cross-browser compatibility, and performance optimization. Collaborated with designers to transform mockups into responsive web interfaces that handled high traffic volumes during product launches.",
+      "type": "fulltime"
+    },
+    {
+      "company": "Drumedar",
+      "role": "Frontend Developer",
+      "period": "2008-2009",
+      "description": "Designed and developed campaign websites for Swedish media and sports organizations during the IE6 era. Led frontend development for Svenska Ishockeyförbundet (Swedish Ice Hockey Federation) website redesign on EPiServer platform. Built mktwebb - a shared technical platform serving 40+ newspapers under mktmedia, Sweden's largest local newspaper consortium. Mastered pixel-perfect implementations from Photoshop designs, writing 3000+ lines of CSS. Specialized in Polopoly CMS, browser compatibility for IE6/7/8, and mentored team members on JavaScript development.",
+      "type": "fulltime"
+    }
+  ],
+  "education": [
+    {
+      "school": "Technigo",
+      "program": "JavaScript Bootcamp",
+      "period": "2025-2026",
+      "description": "Intensive frontend development bootcamp focusing on modern JavaScript and React."
+    },
+    {
+      "school": "Folkuniversitetet",
+      "program": "React.js YH Course",
+      "period": "2025",
+      "description": "10-week intensive course covering React, Redux, and React Router."
+    },
+    {
+      "school": "Furuboda Folkhögskola",
+      "program": "Music Production",
+      "period": "2023-2024",
+      "description": "Remote music production course covering Ableton, sound design, and music theory."
+    },
+    {
+      "school": "Hyper Island",
+      "program": "Digital Media Design",
+      "period": "2009-2011",
+      "description": "Design education focused on digital media and interactive experiences."
+    }
+  ],
+  "links": {
+    "portfolio": "https://daniellauding.com",
+    "linkedin": "https://linkedin.com/in/daniellauding",
+    "github": "https://github.com/daniellauding"
+  }
+}

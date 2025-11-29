@@ -78,6 +78,11 @@ export const theme = {
       title: 'var(--section-footer-title-color)',
       text: 'var(--section-footer-text-color)',
     },
+    cv: {
+      bg: 'var(--section-cv-bg-color)',
+      title: 'var(--section-cv-title-color)',
+      text: 'var(--section-cv-text-color)',
+    },
   },
 
   // Spacing - references CSS variables

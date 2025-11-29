@@ -28,10 +28,9 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     
     const handleSystemThemeChange = (e: MediaQueryListEvent) => {
-      const savedTheme = localStorage.getItem('theme')
-      if (!savedTheme) {
-        setTheme(e.matches ? 'dark' : 'light')
-      }
+      // Always update theme when OS changes, override user preference
+      const newTheme = e.matches ? 'dark' : 'light'
+      setTheme(newTheme)
     }
 
     mediaQuery.addEventListener('change', handleSystemThemeChange)

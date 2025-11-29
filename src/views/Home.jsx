@@ -5,6 +5,7 @@ import { Title } from '@/components/Typography'
 import { Projects } from '@/components/Projects'
 import { Articles } from '@/components/Articles'
 import { Skills } from '@/components/Skills'
+import { CV } from '@/components/CV'
 import { Footer } from '@/components/Footer'
 import aboutData from '@/data/about.json'
 import stackData from '@/data/stack.json'
@@ -20,6 +21,7 @@ export const Home = () => (
       <SkipLink href="#projects">Skip to projects</SkipLink>
       <SkipLink href="#articles">Skip to articles</SkipLink>
       <SkipLink href="#skills">Skip to skills</SkipLink>
+      <SkipLink href="#cv">Skip to CV</SkipLink>
       <SkipLink href="#footer">Skip to contact</SkipLink>
 
       <Title as="h1" className="sr-only">

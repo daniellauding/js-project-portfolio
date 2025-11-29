@@ -1,58 +1,79 @@
 {
   "skills": [
     {
-      "category": "Frontend",
+      "category": "Frontend & Frameworks",
       "items": [
+        "React.js",
+        "React Native",
+        "Vue.js",
+        "Next.js",
+        "Redux",
+        "React Router",
+        "TypeScript",
+        "JavaScript ES6+",
         "HTML5",
         "CSS3",
-        "JavaScript ES6+",
-        "React",
-        "TypeScript",
-        "Redux",
-        "Next.js",
         "Tailwind CSS",
-        "Styled Components"
+        "Bootstrap",
+        "Styled Components",
+        "LESS/SASS",
+        "Expo"
       ]
     },
     {
-      "category": "Backend",
+      "category": "Design & UX",
+      "items": [
+        "Product Design",
+        "UI/UX Design",
+        "Figma",
+        "Sketch",
+        "Adobe Creative Suite",
+        "Prototyping",
+        "Wireframing",
+        "Design Systems",
+        "Mobile & Web Design",
+        "User Testing",
+        "Heuristic Evaluation",
+        "Information Architecture",
+        "Accessibility (WCAG)",
+        "Design Sprints"
+      ]
+    },
+    {
+      "category": "Backend & Tools",
       "items": [
         "Node.js",
         "Express",
+        "Supabase",
         "MongoDB",
         "PostgreSQL",
         "REST APIs",
         "GraphQL",
-        "Authentication",
-        "JWT"
+        "WordPress",
+        "Git/GitHub",
+        "Docker",
+        "Vite",
+        "Webpack",
+        "DNS Management",
+        "Hosting Services"
       ]
     },
     {
-      "category": "Tools & Others",
+      "category": "AI & Innovation",
       "items": [
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Figma",
-        "npm/yarn",
-        "Webpack",
-        "Vite",
-        "Jest",
-        "Docker"
-      ]
-    },
-    {
-      "category": "More",
-      "items": [
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Figma",
-        "npm/yarn",
-        "Webpack",
-        "Vite",
-        "Jest",
-        "Docker"
+        "AI-assisted Development",
+        "Cursor AI",
+        "Lovable",
+        "ChatGPT/GPT-4",
+        "Gamification",
+        "Growth Strategy",
+        "Startup Development",
+        "Business Strategy",
+        "Workshop Facilitation",
+        "Agile/Scrum",
+        "Cross-team Collaboration",
+        "Stakeholder Management",
+        "Leadership"
       ]
     }
   ]

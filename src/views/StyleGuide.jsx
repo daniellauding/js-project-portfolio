@@ -10,6 +10,14 @@ import { Section } from '@/components/Section';
 import { SkipLink } from '@/components/SkipLink';
 import { ProjectCard } from '@/components/Projects/ProjectCard';
 import { ArticleCard } from '@/components/Articles/ArticleCard';
+import { Hero } from '@/components/Hero';
+import { Footer } from '@/components/Footer';
+import { ScrollIndicator } from '@/components/ScrollIndicator';
+import { Skills } from '@/components/Skills';
+import { CV } from '@/components/CV';
+import { TechStack } from '@/components/TechStack';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { Articles } from '@/components/Articles';
 import styled from 'styled-components';
 
 const StyleGuideContainer = styled.div`
@@ -264,6 +272,10 @@ export const StyleGuide = () => {
         <NavItem href="#cards">Cards</NavItem>
         <NavItem href="#layout">Layout</NavItem>
         <NavItem href="#navigation">Navigation</NavItem>
+        <NavItem href="#images">Images</NavItem>
+        <NavItem href="#hero">Hero</NavItem>
+        <NavItem href="#footer">Footer</NavItem>
+        <NavItem href="#interactive">Interactive</NavItem>
       </Navigation>
 
       {/* DESIGN TOKENS */}
@@ -724,6 +736,119 @@ export const StyleGuide = () => {
               <SkipLink href="#main-content">Skip to main content</SkipLink>
               <SkipLink href="#navigation">Skip to navigation</SkipLink>
             </div>
+          </ComponentShowcase>
+        </ExampleGrid>
+      </ComponentSection>
+
+      {/* HERO */}
+      <ComponentSection id="hero">
+        <Title as="h2" size="xxl">Hero Section</Title>
+        <Text>Main landing area with eye-catching content and call-to-action.</Text>
+
+        <ExampleGrid>
+          <ComponentShowcase
+            title="Hero Component"
+            description="Full-width hero section with title, subtitle, and CTA"
+            code={`<Hero
+  title="Welcome to My Portfolio"
+  subtitle="Frontend Developer & UI Designer"
+  ctaText="View My Work"
+  ctaLink="#projects"
+/>`}
+          >
+            <div style={{ width: '100%', minHeight: '300px', position: 'relative' }}>
+              <Hero />
+            </div>
+          </ComponentShowcase>
+        </ExampleGrid>
+      </ComponentSection>
+
+      {/* FOOTER */}
+      <ComponentSection id="footer">
+        <Title as="h2" size="xxl">Footer</Title>
+        <Text>Site footer with contact information and social links.</Text>
+
+        <ExampleGrid>
+          <ComponentShowcase
+            title="Footer Component"
+            description="Responsive footer with social links and copyright"
+            code={`<Footer />`}
+          >
+            <div style={{ width: '100%' }}>
+              <Footer />
+            </div>
+          </ComponentShowcase>
+        </ExampleGrid>
+      </ComponentSection>
+
+      {/* INTERACTIVE COMPONENTS */}
+      <ComponentSection id="interactive">
+        <Title as="h2" size="xxl">Interactive Components</Title>
+        <Text>Dynamic components that enhance user experience.</Text>
+
+        <ExampleGrid>
+          <ComponentShowcase
+            title="Scroll Indicator"
+            description="Visual indicator showing scroll progress"
+            code={`<ScrollIndicator />`}
+          >
+            <div style={{ position: 'relative', height: '100px' }}>
+              <Text size="sm">Scroll the page to see the indicator in action (typically fixed at top of viewport)</Text>
+              <ScrollIndicator />
+            </div>
+          </ComponentShowcase>
+
+          <ComponentShowcase
+            title="Theme Toggle"
+            description="Switch between light and dark themes"
+            code={`<ThemeToggle />`}
+          >
+            <ThemeToggle />
+          </ComponentShowcase>
+
+          <ComponentShowcase
+            title="Skills Component"
+            description="Display skills with visual representation"
+            code={`<Skills
+  skills={[
+    { name: "React", level: 90 },
+    { name: "TypeScript", level: 85 },
+    { name: "CSS", level: 95 }
+  ]}
+/>`}
+          >
+            <Skills />
+          </ComponentShowcase>
+
+          <ComponentShowcase
+            title="Tech Stack"
+            description="Display technologies used in projects"
+            code={`<TechStack
+  technologies={[
+    "React", "TypeScript", "Node.js",
+    "GraphQL", "PostgreSQL", "Docker"
+  ]}
+/>`}
+          >
+            <TechStack />
+          </ComponentShowcase>
+
+          <ComponentShowcase
+            title="CV Component"
+            description="Display resume/CV information"
+            code={`<CV />`}
+          >
+            <div style={{ maxWidth: '600px' }}>
+              <CV />
+            </div>
+          </ComponentShowcase>
+
+          <ComponentShowcase
+            title="Articles List"
+            description="Grid of article cards"
+            code={`<Articles />`}
+          >
+            <Articles />
           </ComponentShowcase>
         </ExampleGrid>
       </ComponentSection>

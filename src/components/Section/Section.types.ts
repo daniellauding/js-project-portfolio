@@ -23,5 +23,5 @@ export type SectionProps = {
   className?: string
   role?: 'main' | 'section' | 'aside' | 'article';
   ariaLabelledBy?: string;
-  hideTitle?: boolean;  // Hide title visually but keep for screen readers
+  hideTitle?: boolean;
 }

@@ -31,6 +31,9 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
             src={image}
             alt={`Screenshot of ${name || 'project'}`}
             className="project-card__image"
+            loading="lazy"
+            width="408"
+            height="280"
           />
         </ProjectImage>
       )}

@@ -11,10 +11,11 @@ type AvatarProps = {
   [key: string]: unknown
   decorative?: boolean;
   loading?: 'lazy' | 'eager';
+  fetchPriority?: 'high' | 'low' | 'auto';
 }
 
-const Avatar = ({ src, alt = 'Avatar', width, height, decorative = false, loading = 'lazy', ...props }: AvatarProps) => {
-  return <StyledAvatar src={src} alt={decorative ? '' : (alt || 'Image')} width={width} height={height} loading={loading} {...props} />
+const Avatar = ({ src, alt = 'Avatar', width, height, decorative = false, loading = 'lazy', fetchPriority, ...props }: AvatarProps) => {
+  return <StyledAvatar src={src} alt={decorative ? '' : (alt || 'Image')} width={width} height={height} loading={loading} fetchPriority={fetchPriority} {...props} />
 }
 
 export { Avatar }

@@ -15,7 +15,9 @@ export const Icon = ({
   const iconSvg = (icons as Record<string, string>)[name]
 
   if (!iconSvg) {
-    console.warn(`Icon "${name}" not found`)
+    if (import.meta.env.DEV) {
+      console.warn(`Icon "${name}" not found`)
+    }
     return null
   }
 

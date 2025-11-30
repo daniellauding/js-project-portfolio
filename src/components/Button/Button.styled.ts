@@ -99,12 +99,10 @@ export const StyledButton = styled.button<StyledButtonProps>`
     }
   `}
 
-  /* Full width */
   ${props => props.$fullWidth && `
     width: 100%;
   `}
 
-  /* Icon only (square shape) */
   ${props => props.$iconOnly && `
     padding: var(--spacing-sm);
     aspect-ratio: 1;
@@ -131,15 +129,13 @@ export const StyledButton = styled.button<StyledButtonProps>`
     justify-content: center;
     flex-shrink: 0;
 
-    /* Icon should follow button height for height, and maintain aspect ratio */
     svg, img {
       width: auto;
-      height: 1em; /* Follow text line-height */
+      height: 1em;
       max-width: 100%;
       max-height: 100%;
     }
 
-    /* When custom width/height is set via style prop, let icon fill the container */
     &[style*="width"], &[style*="height"] {
       width: 100%;
       height: 100%;
@@ -152,7 +148,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
     }
   }
 
-  /* Icon-only buttons - icon fills the button */
   ${props => props.$iconOnly && `
     .button__icon {
       width: 100%;

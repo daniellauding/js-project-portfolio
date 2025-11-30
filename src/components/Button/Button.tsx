@@ -29,19 +29,16 @@ export const Button: FC<ButtonProps> = ({
   const renderIcon = () => {
     if (!icon) return null
 
-    // Extract width/height from style prop to pass to icon container
     const iconStyle = style && (style.width || style.height) 
       ? { width: style.width, height: style.height }
       : undefined
 
-    // Calculate icon size for custom sizing
     const getIconSize = () => {
       if (style?.width && style?.height) {
-        // Use the smaller of width/height to ensure icon fits
         const width = typeof style.width === 'string' ? parseInt(style.width) : style.width
         const height = typeof style.height === 'string' ? parseInt(style.height) : style.height
         const minSize = Math.min(width, height)
-        return `${minSize * 0.6}px` // Use 60% of button size for icon
+        return `${minSize * 0.6}px`
       }
       return undefined
     }
@@ -79,7 +76,6 @@ export const Button: FC<ButtonProps> = ({
   )
 
   if (href) {
-    // Ensure icon-only links always have accessible text
     const accessibleLabel = iconOnly && !ariaLabel 
       ? (typeof icon === 'string' ? `${icon} link` : 'Link')
       : ariaLabel

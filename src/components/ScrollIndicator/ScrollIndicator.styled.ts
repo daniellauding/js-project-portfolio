@@ -16,10 +16,9 @@ export const StyledScrollIndicator = styled.div<StyledScrollIndicatorProps>`
   z-index: 9999;
   transform-origin: 0% 50%;
   
-  /* CSS Scroll-driven animation */
   animation: scroll-progress linear;
   animation-timeline: scroll();
-  animation-duration: 1ms; /* Required for Firefox */
+  animation-duration: 1ms;
 
   @keyframes scroll-progress {
     from {
@@ -30,7 +29,6 @@ export const StyledScrollIndicator = styled.div<StyledScrollIndicatorProps>`
     }
   }
 
-  /* Fallback for browsers that don't support scroll-driven animations */
   @supports not (animation-timeline: scroll()) {
     transform: scaleX(var(--scroll-progress, 0));
     transition: transform 0.1s ease-out;

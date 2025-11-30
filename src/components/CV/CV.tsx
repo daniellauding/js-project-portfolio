@@ -21,7 +21,7 @@ export const CV = () => {
   const visibleEducation = showAllEducation ? cvData.education : cvData.education.slice(0, 3)
 
   return (
-    <Section variant="cv" id="cv">
+    <Section id="cv">
       <CVContainer className="cv">
         <Title as="h2" size="xs" color="var(--text-text)" className="cv__title "id="experience-title">Experience</Title>
         

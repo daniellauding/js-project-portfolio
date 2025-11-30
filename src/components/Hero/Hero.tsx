@@ -57,6 +57,8 @@ export const Hero = ({ data }: HeroProps) => {
                 width="164px"
                 height="164px"
                 className="section__avatar"
+                loading="eager"
+                fetchPriority="high"
               />
           </HeroAvatar>
         )}

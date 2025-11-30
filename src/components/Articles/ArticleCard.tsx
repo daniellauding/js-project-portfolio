@@ -37,6 +37,9 @@ export const ArticleCard = ({ article, role, ...props }: ArticleCardProps) => {
             src={image}
             alt={`Screenshot of ${title || 'article'}`}
             className="article-card__image"
+            loading="lazy"
+            width="408"
+            height="280"
           />
         </ArticleImage>
       )}

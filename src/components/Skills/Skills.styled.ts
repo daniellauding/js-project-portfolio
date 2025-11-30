@@ -21,25 +21,8 @@ export const SkillCategory = styled.div`
 `
 
 export const CategoryHeader = styled.div`
-  // padding: var(--spacing-sm) var(--spacing-md);
   margin-bottom: var(--spacing-lg);
   border-radius: var(--radius-sm);
-  
-  // &.code {
-  //   background: var(--color-secondary);
-  // }
-  
-  // &.toolbox {
-  //   background: var(--color-primary);
-  // }
-  
-  // &.upcoming {
-  //   background: var(--color-tertiary);
-  // }
-  
-  // &.more {
-  //   background: var(--color-secondary);
-  // }
 `
 
 export const SkillsList = styled.ul`

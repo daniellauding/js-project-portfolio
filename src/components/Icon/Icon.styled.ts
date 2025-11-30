@@ -10,15 +10,15 @@ export const StyledIcon = styled.div<{
   justify-content: center;
 
   width: ${props => {
-    // if (props.$size === 's') return '16px'
-    // if (props.$size === 'l') return '32px'
-    // return '24px'
+    if (props.$size === 's') return '16px'
+    if (props.$size === 'l') return '32px'
+    return '24px'
   }};
 
   height: ${props => {
-    // if (props.$size === 's') return '16px'
-    // if (props.$size === 'l') return '32px'
-    // return '24px'
+    if (props.$size === 's') return '16px'
+    if (props.$size === 'l') return '32px'
+    return '24px'
   }};
 
   ${props =>

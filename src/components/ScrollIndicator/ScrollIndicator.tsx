@@ -11,7 +11,6 @@ export const ScrollIndicator: FC<ScrollIndicatorProps> = ({
   const indicatorRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Fallback for browsers that don't support CSS scroll-driven animations
     const updateScrollProgress = () => {
       if (!indicatorRef.current) return
 
@@ -22,17 +21,16 @@ export const ScrollIndicator: FC<ScrollIndicatorProps> = ({
       indicatorRef.current.style.setProperty('--scroll-progress', scrollProgress.toString())
     }
 
-    // Check if scroll-driven animations are supported
     const supportsScrollTimeline = CSS.supports('animation-timeline: scroll()')
     
     if (!supportsScrollTimeline) {
       window.addEventListener('scroll', updateScrollProgress, { passive: true })
-      updateScrollProgress() // Initial call
+      updateScrollProgress()
     }
 
     return () => {
       if (!supportsScrollTimeline) {
-        window.removeEventListener('scroll', updateScrollProgress)
+        window.removeEventListener('scroll', updateScrollProgress, { passive: true })
       }
     }
   }, [])

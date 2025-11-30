@@ -1,33 +1,29 @@
 import { Title, Text } from '@/components/Typography'
 import { Image } from '@/components/Image'
-
-interface CardProps {
-  image?: string
-  title?: string
-  desc?: string
-  tags?: string[]
-  netlify?: string
-  github?: string
-  role?: string
-}
+import { CardProps } from './Card.types'
+import { StyledCard, TagsContainer, Tag, LinksContainer } from './Card.styled'
 
 export const Card = ({ image, title, desc, tags, netlify, github, role }: CardProps) => {
   return (
-    <div role={role}>
+    <StyledCard role={role}>
       {image && <Image src={image} alt="Thumbnail" />}
       {title && <Title>{title}</Title>}
       {desc && <Text>{desc}</Text>}
 
       {tags && (
-        <div>
+        <TagsContainer>
           {tags.map(tag => (
-            <Text key={tag}>{tag}</Text>
+            <Tag key={tag}>{tag}</Tag>
           ))}
-        </div>
+        </TagsContainer>
       )}
 
-      {netlify && <Text>{netlify}</Text>}
-      {github && <Text>{github}</Text>}
-    </div>
+      {(netlify || github) && (
+        <LinksContainer>
+          {netlify && <Text>{netlify}</Text>}
+          {github && <Text>{github}</Text>}
+        </LinksContainer>
+      )}
+    </StyledCard>
   )
 }

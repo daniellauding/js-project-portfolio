@@ -1,11 +1,9 @@
 export const theme = {
-  // Fonts
   fonts: {
     title: 'var(--title-font-family)',
     text: 'var(--text-font-family)',
   },
 
-  // Font sizes - Title
   titleSizes: {
     xs: 'var(--title-xs)', // 20px
     sm: 'var(--title-sm)', // 24px
@@ -16,7 +14,6 @@ export const theme = {
     huge: 'var(--title-huge)', // 80px
   },
 
-  // Font sizes - Text
   textSizes: {
     xs: 'var(--text-xs)', // 12px
     sm: 'var(--text-sm)', // 14px
@@ -27,7 +24,6 @@ export const theme = {
     huge: 'var(--text-huge)', // 32px
   },
 
-  // Font weights
   weights: {
     normal: 'var(--weight-normal)', // 400
     medium: 'var(--weight-medium)', // 500
@@ -35,7 +31,6 @@ export const theme = {
     bold: 'var(--weight-bold)', // 700
   },
 
-  // Base colors
   colors: {
     bg: 'var(--bg-color)',
     title: 'var(--title-color)',
@@ -46,7 +41,6 @@ export const theme = {
     icon: 'var(--color-icon)',
   },
 
-  // Section variants
   sections: {
     hero: {
       bg: 'var(--section-hero-bg-color)',
@@ -85,7 +79,6 @@ export const theme = {
     },
   },
 
-  // Spacing - references CSS variables
   spacing: {
     xs: 'var(--spacing-xs)', // 4px
     sm: 'var(--spacing-sm)', // 8px
@@ -96,15 +89,13 @@ export const theme = {
     huge: 'var(--spacing-huge)', // 124px
   },
 
-  // Border radius - references CSS variables
   radius: {
     sm: 'var(--radius-sm)', // 4px
     md: 'var(--radius-md)', // 8px
     lg: 'var(--radius-lg)', // 12px
     round: 'var(--radius-round)', // 50%
   },
-
-  // Breakpoints for responsive design
+  
   breakpoints: {
     mobile: 'var(--breakpoint-mobile)', // 480px
     tablet: 'var(--breakpoint-tablet)', // 768px
@@ -112,46 +103,26 @@ export const theme = {
     wide: 'var(--breakpoint-wide)', // 1200px
   },
 
-  // Media query helpers (easy to use in styled-components!)
+  
   media: {
     mobile: `@media (min-width: 480px)`,
     tablet: `@media (min-width: 768px)`,
     desktop: `@media (min-width: 1024px)`,
     wide: `@media (min-width: 1200px)`,
-    // Max-width queries (mobile-first approach alternative)
+    
     maxMobile: `@media (max-width: 479px)`,
     maxTablet: `@media (max-width: 767px)`,
     maxDesktop: `@media (max-width: 1023px)`,
   },
 }
 
-// ============================================
-// TypeScript Magic Explained Simply! 🎓
-// ============================================
-
-// This line creates a TYPE based on the theme object above
-// "typeof theme" means: "Look at the theme object and create a type that matches its shape"
 export type Theme = typeof theme
 
-// Why? So TypeScript knows what props.theme looks like!
-// Now when you type props.theme., you get autocomplete! ✨
-
-// ============================================
-// Helper Function (Optional - You Can Delete This!)
-// ============================================
-
-// This function lets you get theme values using a string path
-// Example: getThemeValue('colors.primary') → returns 'var(--title-color)'
-// But you probably won't use this - props.theme.colors.primary is easier!
 export const getThemeValue = (path: string): string | undefined => {
-  // Split 'colors.primary' into ['colors', 'primary']
   const keys = path.split('.')
 
-  // Start with the full theme object
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   let value: any = theme
 
-  // Walk through each key: theme → theme.colors → theme.colors.primary
   for (const key of keys) {
     value = value[key]
     if (value === undefined) return undefined

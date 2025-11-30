@@ -7,7 +7,6 @@ import { ScrollIndicator } from '@/components/ScrollIndicator'
 import { theme } from '@/theme'
 import { Home } from '@/views/Home'
 
-// Lazy load StyleGuide as it's not on the main page
 const StyleGuide = lazy(() => import('@/views/StyleGuide').then(module => ({ default: module.StyleGuide })))
 
 export const App = () => {

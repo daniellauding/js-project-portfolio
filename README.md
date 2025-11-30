@@ -1,6 +1,8 @@
 # Portfolio
 🌟 My Portfolio Website
 
+🔗 **Live Site:** [technigo.daniellauding.se](https://technigo.daniellauding.se)
+
   Hi! I'm Daniel, and this is my portfolio website where I show off my projects and tell you about myself!
 
   🎯 What This Website Does
@@ -66,6 +68,8 @@
   - Accessibility First - Everyone can use my website, no matter how they browse
   - Mobile Friendly - Works great on phones and big computers
   - Fast Loading - Nobody likes waiting for slow websites!
+  - Dark Mode - Easy on your eyes when browsing at night 🌙
+  - Interactive Design System - Browse all components in the StyleGuide
 
   🎨 Why Simple Design Works
 
@@ -107,6 +111,53 @@
   - Planning first saves time later
   - Making it accessible means everyone can enjoy it
   - Clean code is like a gift to your future self
+
+  ## 🚀 Quick Start
+
+  ```bash
+  # Install dependencies
+  npm install
+
+  # Start development server
+  npm run dev
+
+  # Build for production
+  npm run build
+
+  # Preview production build
+  npm run preview
+  ```
+
+  ## 📁 Project Structure
+
+  ```
+  src/
+  ├── components/      # Reusable UI components
+  ├── views/          # Page components
+  ├── styles/         # Global styles and themes
+  ├── utils/          # Helper functions
+  └── data/           # Static data (projects, skills, etc.)
+  ```
+
+  ## 🎨 Features
+
+  - **Component-Based Architecture** - Modular, reusable components
+  - **TypeScript** - Type-safe development
+  - **Styled Components** - CSS-in-JS styling
+  - **Dark/Light Theme** - Toggle between themes
+  - **Responsive Design** - Mobile-first approach
+  - **Accessibility** - WCAG 2.1 AA compliant
+  - **SEO Optimized** - Meta tags and semantic HTML
+  - **Performance** - Lazy loading and optimized assets
+
+  ## 🛠 Tech Stack
+
+  - **React 18** - UI library
+  - **TypeScript** - Type safety
+  - **Vite** - Build tool
+  - **Styled Components** - Styling
+  - **React Router** - Routing
+  - **ESLint & Prettier** - Code quality
 
   ---
   Made with ❤️ by Daniel - A person who thinks websites should be fast, pretty, and work for everyone!

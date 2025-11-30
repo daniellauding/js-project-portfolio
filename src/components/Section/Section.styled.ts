@@ -50,6 +50,36 @@ type StyledProps = {
 export const StyledSection = styled.section<StyledProps>`
   width: 100%;
   padding: var(--spacing-xl) var(--spacing-xl);
+  opacity: 0;
+  
+  /* Hero section should be visible immediately, then fade in with delay */
+  &.section--hero {
+    opacity: 1;
+    
+    &.animate__animated {
+      animation-delay: var(--animate-delay, 0.3s);
+    }
+  }
+  
+  /* Apply custom animation delay if set */
+  &[style*="--animate-delay"] {
+    &.animate__animated {
+      animation-delay: var(--animate-delay);
+    }
+  }
+  
+  &.animate__animated {
+    opacity: 1;
+  }
+  
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    opacity: 1 !important;
+    
+    &.animate__animated {
+      animation: none !important;
+    }
+  }
 
   &.section--cv {
     padding: 0;

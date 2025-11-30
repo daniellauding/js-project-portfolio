@@ -24,4 +24,7 @@ export type SectionProps = {
   role?: 'main' | 'section' | 'aside' | 'article';
   ariaLabelledBy?: string;
   hideTitle?: boolean;
+  animate?: boolean;
+  animationType?: 'fadeInUp' | 'fadeIn' | 'fadeInLeft' | 'fadeInRight' | 'zoomIn';
+  animationDelay?: number;
 }

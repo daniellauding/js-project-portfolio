@@ -32,6 +32,9 @@ export const Hero = ({ data }: HeroProps) => {
       title="About me"
       hideTitle={true}
       alignItems="center"
+      animate={true}
+      animationType="fadeIn"
+      animationDelay={0.3}
     >
 
 

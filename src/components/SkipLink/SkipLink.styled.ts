@@ -10,6 +10,7 @@ export const StyledSkipLink = styled.a`
   margin: -1px;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
   white-space: nowrap;
   border-width: 0;
   background-color: var(--title-color);
@@ -33,6 +34,7 @@ export const StyledSkipLink = styled.a`
     margin: 0;
     overflow: visible;
     clip: auto;
+    clip-path: none;
     white-space: nowrap;
     z-index: 999999;
     background: var(--title-color);

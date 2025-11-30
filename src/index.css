@@ -48,7 +48,7 @@
 
   /* === SECTION: ARTICLES === */
   --section-articles-bg-color: #BFD9D1;
-  --section-articles-title-color: #139069;
+  --section-articles-title-color: #0D5C3F;
   --section-articles-text-color: var(--text-color);
 
   /* === SECTION: SKILLS === */
@@ -240,6 +240,11 @@ body {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  list-style-type: none;
 }
 
 /* Screen reader only - hides visually but keeps for screen readers */

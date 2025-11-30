@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Image } from '@/components/Image'
 
-export const ProjectsContainer = styled.div`
+export const ProjectsContainer = styled.ul`
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);

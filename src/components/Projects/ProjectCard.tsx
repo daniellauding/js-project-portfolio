@@ -24,7 +24,7 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
   if (!hasContent) return null
 
   return (
-    <Card className="project-card" role="listitem" {...props}>
+    <Card className="project-card" {...props}>
       {image && (
         <ProjectImage className="project-card__media">
           <StyledImage
@@ -43,7 +43,7 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
           </ProjectDateBadge>
         )}
         {name && (
-          <Title size="md" weight="semibold" className="project-card__title" color={theme === 'dark' ? '#fff' : '#000'} as="h3" style={{ margin: 0 }}>
+          <Title size="md" weight="semibold" className="project-card__title" color={theme === 'dark' ? '#fff' : '#000'} as="h3">
             {name}
           </Title>
         )}

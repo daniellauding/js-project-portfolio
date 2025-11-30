@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 import { Image } from '@/components/Image'
 
-export const ArticlesContainer = styled.div`
+export const ArticlesContainer = styled.ul`
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
+  list-style: none;
 
   ${props => props.theme.media.desktop} {
     grid-template-columns: repeat(2, 1fr);

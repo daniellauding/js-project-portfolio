@@ -22,12 +22,12 @@ export const Articles = ({ data }: ArticlesProps) => {
         aria-label={`${articles.length} recent articles`}
       >
         {articles.map((article) => (
-          <ArticleCard 
-            key={article.id} 
-            article={article}
-            role="listitem"
-            aria-label={`Article: ${article.title}`}
-          />
+          <li key={article.id}>
+            <ArticleCard 
+              article={article}
+              aria-label={`Article: ${article.title}`}
+            />
+          </li>
         ))}
       </ArticlesContainer>
     </Section>

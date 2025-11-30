@@ -28,12 +28,13 @@ export const Projects = ({ data }: ProjectsProps) => {
       gap="0"
       aria-label="Featured projects and experience showcase"
     >
-      <TabsContainer className="section__tabs">
+      <TabsContainer className="section__tabs" role="tablist" aria-label="Content sections">
         <Tag
           onClick={() => setActiveTab('projects')}
           selected={activeTab === 'projects'}
-          role="button"
-          aria-pressed={activeTab === 'projects'}
+          role="tab"
+          aria-selected={activeTab === 'projects'}
+          aria-controls="projects-content"
           variant="chip"
           className="section__tab section__tab--projects"
         >
@@ -42,8 +43,9 @@ export const Projects = ({ data }: ProjectsProps) => {
         <Tag
           onClick={() => setActiveTab('cv')}
           selected={activeTab === 'cv'}
-          role="button"
-          aria-pressed={activeTab === 'cv'}
+          role="tab"
+          aria-selected={activeTab === 'cv'}
+          aria-controls="cv-content"
           variant="chip"
           className="section__tab section__tab--cv"
           >
@@ -58,20 +60,27 @@ export const Projects = ({ data }: ProjectsProps) => {
       {activeTab === 'projects' && (
         <ProjectsContainer 
           role="list"
+          id="projects-content"
           aria-label={`${projects.length} featured projects`}
           className="section__projects"
+          aria-labelledby={titleId}
         >
-          {projects.map((project, index) => (
+        {projects.map((project, index) => (
+          <li key={project.name || index}>
             <ProjectCard 
-              key={project.name || index} 
               project={project} 
               aria-label={`Project: ${project.name}`}
             />
-          ))}
+          </li>
+        ))}
         </ProjectsContainer>
       )}
 
-      {activeTab === 'cv' && <CV />}
+      {activeTab === 'cv' && (
+        <div id="cv-content" aria-labelledby={titleId}>
+          <CV />
+        </div>
+      )}
     </Section>
   )
 }

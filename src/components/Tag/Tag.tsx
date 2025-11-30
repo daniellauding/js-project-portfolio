@@ -31,8 +31,8 @@ export const Tag = ({
       role={role || (onClick ? 'button' : 'listitem')}
       tabIndex={disabled ? -1 : onClick ? 0 : undefined}
       aria-label={typeof children === 'string' ? children : undefined}
-      aria-pressed={ariaPressed}
-      aria-selected={selected}
+      aria-pressed={role === 'button' ? (ariaPressed !== undefined ? ariaPressed : selected) : undefined}
+      aria-selected={role === 'tab' ? (ariaSelected !== undefined ? ariaSelected : selected) : undefined}
       aria-disabled={disabled}
       aria-describedby={ariaDescribedBy}
     >

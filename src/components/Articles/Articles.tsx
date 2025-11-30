@@ -1,4 +1,3 @@
-import { Title } from '@/components/Typography'
 import { Section } from '@/components/Section'
 import { ArticleCard } from './ArticleCard'
 import { ArticlesProps } from './Articles.types'
@@ -16,15 +15,17 @@ export const Articles = ({ data }: ArticlesProps) => {
       id="articles"
       aria-label="Recent articles and blog posts"
       title="My words"
+      gap="xxl"
     >
       <ArticlesContainer 
-        role="grid"
+        role="list"
         aria-label={`${articles.length} recent articles`}
       >
         {articles.map((article) => (
           <ArticleCard 
             key={article.id} 
             article={article}
+            role="listitem"
             aria-label={`Article: ${article.title}`}
           />
         ))}

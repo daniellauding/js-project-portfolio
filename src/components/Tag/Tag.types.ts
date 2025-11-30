@@ -5,7 +5,9 @@ export interface TagProps {
   onRemove?: () => void;
   selected?: boolean;
   disabled?: boolean;
+  role?: string;
   ariaDescribedBy?: string;
   ariaPressed?: boolean;
   ariaSelected?: boolean;
+  variant?: 'default' | 'chip';
 }

@@ -1,5 +1,6 @@
 import { Avatar } from '@/components/Image'
-import { Title, Text } from '@/components/Typography'
+import { Text } from '@/components/Typography'
+import { useTheme } from '@/contexts/ThemeContext'
 import { Section } from '@/components/Section'
 import { FooterProps } from './Footer.types'
 import {
@@ -22,6 +23,8 @@ export const SOCIAL_ICON_MAP: Record<string, string> = {
 
 export const Footer = ({ data }: FooterProps) => {
   if (!data) return null
+
+  const { theme } = useTheme()
 
   const { name, phone, email, avatar_url, socialLinks } = data
 
@@ -48,11 +51,11 @@ export const Footer = ({ data }: FooterProps) => {
         
         <ContactInfo className="section__contact">
           {name && (
-            <Text size="huge" weight="semibold" align="center" color="#000000" className="section__name">{name}</Text>
+            <Text size="huge" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__name">{name}</Text>
           )}
 
           {phone && (
-            <Text size="huge" weight="semibold" align="center" color="#000000" className="section__phone">
+            <Text size="huge" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__phone">
               <ContactLink 
                 href={`tel:${phone}`}
                 aria-label={`Call ${phone}`}
@@ -63,7 +66,7 @@ export const Footer = ({ data }: FooterProps) => {
           )}
 
           {email && (
-            <Text size="huge" weight="semibold" align="center" color="#000000" className="section__email">
+            <Text size="huge" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__email">
               <ContactLink 
                 href={`mailto:${email}`}
                 aria-label={`Email ${email}`}
@@ -102,12 +105,12 @@ export const Footer = ({ data }: FooterProps) => {
       <FooterMarquee aria-hidden="true">
         <MarqueeTrack>
           <MarqueeText>
-            <Text size="huge" weight="semibold" color="#fff" className="section__misc-text">
+            <Text size="huge" weight="semibold" color={theme === 'dark' ? '#fff' : '#fff'} className="section__misc-text">
               Daniel Lauding • Design Engineer • Daniel Lauding • Design Engineer • Daniel Lauding • Design Engineer • Daniel Lauding • Design Engineer •
             </Text>
           </MarqueeText>
           <MarqueeText>
-            <Text size="huge" weight="semibold" color="#fff" className="section__misc-text">
+            <Text size="huge" weight="semibold" color={theme === 'dark' ? '#fff' : '#fff'} className="section__misc-text">
               Daniel Lauding • Design Engineer • Daniel Lauding • Design Engineer • Daniel Lauding • Design Engineer • Daniel Lauding • Design Engineer •
             </Text>
           </MarqueeText>

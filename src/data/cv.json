@@ -2,6 +2,7 @@
   "experience": [
     {
       "company": "Fröjd Interactive",
+      "companyUrl": "https://www.frojd.se",
       "role": "Frontend Design Consultant",
       "period": "2025",
       "description": "Frontend consultant delivering sustainable web solutions for major Swedish organizations. Implemented Storybook design system components for Energiforsk's energy-efficient website using Next.js, contributing to 75% lighter page loads. Built Vue.js frontend for Gavlegårdarna's housing platform serving 30,000 residents with WCAG AA compliance. Developed Edenred's benefits platform migration from Episerver to WordPress with Google API integration.",
@@ -9,13 +10,15 @@
     },
     {
       "company": "instinctly AB",
+      "companyUrl": "https://www.instinctly.se",
       "role": "Frontend Developer & Design Consultant",
       "period": "2017-Present",
-      "description": "Running frontend development consultancy specializing in React, TypeScript, Next.js, and modern JavaScript frameworks. Leading frontend development projects throughout 2025 with focus on component-driven architecture, performance optimization, and accessibility. Working extensively with AI-assisted development tools like Cursor and ChatGPT to accelerate development workflows and deliver high-quality responsive web applications.",
+      "description": "Running frontend development consultancy specializing in React, TypeScript, and modern JavaScript frameworks. Leading frontend development projects throughout 2025 with focus on component-driven architecture, performance optimization, and accessibility. Working extensively with AI-assisted development tools like Cursor and ChatGPT to accelerate development workflows and deliver high-quality responsive web applications.",
       "type": "founder"
     },
     {
       "company": "Asteria AB",
+      "companyUrl": "https://www.asteria.ai",
       "role": "Frontend Developer & Product Designer",
       "period": "2017-2025",
       "description": "Co-founded fintech startup where I handled all frontend design implementation and development using React and implemented design systems with Storybook. Built the entire frontend design for Smart Cash Flow platform, creating reusable components and establishing development workflows. Combined product design and frontend development to rapidly prototype and iterate on features.",
@@ -29,7 +32,8 @@
       "type": "parttime"
     },
     {
-      "company": "Futurniture (IKEA Projects)",
+      "company": "Futurniture",
+      "companyUrl": "https://www.futurniture.se",
       "role": "Frontend Developer",
       "period": "2009",
       "description": "Created campaign websites and portals for major clients including IKEA and Duni. Built custom WordPress themes and developed interactive frontend experiences for IKEA's marketing campaigns. Focused on clean HTML/CSS implementation, cross-browser compatibility, and performance optimization. Collaborated with designers to transform mockups into responsive web interfaces that handled high traffic volumes during product launches.",
@@ -37,6 +41,7 @@
     },
     {
       "company": "Drumedar",
+      "companyUrl": "https://web.archive.org/web/20091124222733/http://www.drumedar.se/",
       "role": "Frontend Developer",
       "period": "2008-2009",
       "description": "Frontend developer on teams building campaign websites for Swedish media and sports organizations during the IE6 era. Contributed to Svenska Ishockeyförbundet (Swedish Ice Hockey Federation) website redesign on EPiServer platform. Part of the team building mktwebb - a shared technical platform serving 40+ newspapers under mktmedia, Sweden's largest local newspaper consortium. Mastered pixel-perfect implementations from Photoshop designs, writing 3000+ lines of CSS. Specialized in HTML/CSS development with Polopoly CMS and ensured browser compatibility for IE6/7/8.",
@@ -46,24 +51,28 @@
   "education": [
     {
       "school": "Technigo",
+      "schoolUrl": "https://www.technigo.io",
       "program": "JavaScript Bootcamp",
       "period": "2025-2026",
       "description": "Intensive frontend development bootcamp focusing on modern JavaScript and React."
     },
     {
       "school": "Folkuniversitetet",
+      "schoolUrl": "https://www.folkuniversitetet.se",
       "program": "React.js YH Course",
       "period": "2025",
       "description": "10-week intensive course covering React, Redux, and React Router."
     },
     {
       "school": "Furuboda Folkhögskola",
+      "schoolUrl": "https://www.furuboda.se",
       "program": "Music Production",
       "period": "2023-2024",
       "description": "Remote music production course covering Ableton, sound design, and music theory."
     },
     {
       "school": "Hyper Island",
+      "schoolUrl": "https://www.hyperisland.com",
       "program": "Digital Media Design",
       "period": "2009-2011",
       "description": "Design education focused on digital media and interactive experiences."

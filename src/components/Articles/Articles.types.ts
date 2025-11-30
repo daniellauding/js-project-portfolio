@@ -19,4 +19,5 @@ export interface ArticlesProps {
 
 export interface ArticleCardProps {
   article: Article
+  role?: string
 }

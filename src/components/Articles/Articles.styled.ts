@@ -8,11 +8,11 @@ export const ArticlesContainer = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
 
-  ${props => props.theme.media.tablet} {
+  ${props => props.theme.media.desktop} {
     grid-template-columns: repeat(2, 1fr);
     display: grid;
+    // padding: 0 var(--spacing-lg);
   }
 `
 
@@ -31,12 +31,16 @@ export const ArticleCard = styled.article`
 
 export const ArticleImage = styled.div`
   position: relative;
-  width: 408px;
-  max-width: 408px;
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 408 / 280;
   overflow: hidden;
   border-left: 20px solid var(--section-articles-title-color);
   border-bottom: 20px solid var(--section-articles-title-color);
+  ${props => props.theme.media.desktop} {
+    // width: 408px;
+    // max-width: 408px;
+  }
 `
 
 export const StyledImage = styled(Image)`
@@ -51,18 +55,21 @@ export const ArticleContent = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-lg);
 `
 
 export const ArticleDate = styled.div`
-  background: var(--text-color);
-  color: var(--bg-color);
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-xs);
+  background: var(--tag-bg-color);
+  color: var(--tag-text-color);
+  padding: 0 var(--spacing-xs) 0px var(--spacing-xs);
+  height: 24px;
+  border-radius: 0;
+  font-size: var(--text-md);
   font-family: var(--text-font-family);
   font-weight: var(--weight-medium);
   width: fit-content;
-  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  margin-bottom: -16px;
 `
 
 export const ArticleFooter = styled.div`
@@ -82,15 +89,17 @@ export const ArticleReadTime = styled.span`
 export const ArticleLink = styled.a`
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-xs);
-  color: var(--section-articles-title-color);
+  gap: var(--spacing-md);
+  color: var(--text-color);
   text-decoration: none;
   font-family: var(--text-font-family);
-  font-size: var(--text-md);
+  font-size: var(--text-xl);
   font-weight: var(--weight-medium);
-  padding: var(--spacing-xs);
-  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: 9999px;
   transition: opacity 0.2s ease;
+  background: #fff;
+  height: 48px;
 
   &:hover {
     opacity: 0.7;

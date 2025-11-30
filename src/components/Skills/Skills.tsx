@@ -1,11 +1,10 @@
-import { Title } from '@/components/Typography'
+import { Title, Text } from '@/components/Typography'
 import { Section } from '@/components/Section'
 import { SkillsProps } from './Skills.types'
 import {
   SkillsGrid,
   SkillCategory,
   CategoryHeader,
-  CategoryTitle,
   SkillsList,
   SkillItem
 } from './Skills.styled'
@@ -29,8 +28,9 @@ export const Skills = ({ data }: SkillsProps) => {
       variant="skills" 
       id="skills"
       aria-label="Technical skills and expertise"
+      title="Skills"
+      gap="xxl"
     >
-      <Title size="xl" style={{ color: 'white', textAlign: 'center' }}>Skills</Title>
       <SkillsGrid 
         role="list"
         aria-label={`${skills.length} skill categories`}
@@ -38,7 +38,9 @@ export const Skills = ({ data }: SkillsProps) => {
         {skills.map((skill, index) => (
           <SkillCategory key={skill.category || index} role="listitem">
             <CategoryHeader className={getCategoryClass(skill.category)}>
-              <CategoryTitle>{skill.category}</CategoryTitle>
+              <Title as="h3" size="md" className="skills__category-title" align="left">
+                {skill.category}
+              </Title>
             </CategoryHeader>
             {skill.items && skill.items.length > 0 && (
               <SkillsList 
@@ -47,7 +49,9 @@ export const Skills = ({ data }: SkillsProps) => {
               >
                 {skill.items.map((item, itemIndex) => (
                   <SkillItem key={itemIndex} role="listitem">
-                    {item}
+                    <Text size="lg" color="inherit" className="skills__item-text">
+                      {item}
+                    </Text>
                   </SkillItem>
                 ))}
               </SkillsList>

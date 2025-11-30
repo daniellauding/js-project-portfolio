@@ -2,8 +2,9 @@ import { Title } from '@/components/Typography'
 import { Section } from '@/components/Section'
 import { ProjectCard } from './ProjectCard'
 import { ProjectsProps } from './Projects.types'
-import { ProjectsContainer } from './Projects.styled'
+import { ProjectsContainer, TabsContainer } from './Projects.styled'
 import { CV } from '@/components/CV'
+import { Tag } from '@/components/Tag'
 import { useState } from 'react'
 
 export const Projects = ({ data }: ProjectsProps) => {
@@ -14,51 +15,51 @@ export const Projects = ({ data }: ProjectsProps) => {
   const projects = data?.projects
   if (!projects || !Array.isArray(projects) || projects.length === 0) return null
 
+  const getActiveTitle = () => {
+    return activeTab === 'projects' ? 'Featured Projects' : 'Experience & Education'
+  }
+
+  const titleId = 'projects-title'
+
   return (
     <Section 
       variant="projects" 
       id="projects"
+      gap="0"
       aria-label="Featured projects and experience showcase"
     >
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
-        <button
+      <TabsContainer className="section__tabs">
+        <Tag
           onClick={() => setActiveTab('projects')}
-          style={{
-            padding: '0.5rem 1rem',
-            borderRadius: '20px',
-            border: 'none',
-            background: activeTab === 'projects' ? '#007bff' : '#f8f9fa',
-            color: activeTab === 'projects' ? 'white' : '#333',
-            cursor: 'pointer',
-            fontSize: '0.9rem',
-            fontWeight: activeTab === 'projects' ? '600' : '400',
-            transition: 'all 0.2s ease'
-          }}
+          selected={activeTab === 'projects'}
+          role="button"
+          aria-pressed={activeTab === 'projects'}
+          variant="chip"
+          className="section__tab section__tab--projects"
         >
           Featured Projects
-        </button>
-        <button
+        </Tag>
+        <Tag
           onClick={() => setActiveTab('cv')}
-          style={{
-            padding: '0.5rem 1rem',
-            borderRadius: '20px',
-            border: 'none',
-            background: activeTab === 'cv' ? '#007bff' : '#f8f9fa',
-            color: activeTab === 'cv' ? 'white' : '#333',
-            cursor: 'pointer',
-            fontSize: '0.9rem',
-            fontWeight: activeTab === 'cv' ? '600' : '400',
-            transition: 'all 0.2s ease'
-          }}
-        >
+          selected={activeTab === 'cv'}
+          role="button"
+          aria-pressed={activeTab === 'cv'}
+          variant="chip"
+          className="section__tab section__tab--cv"
+          >
           Experience & Education
-        </button>
-      </div>
+        </Tag>
+      </TabsContainer>
+
+      <Title id={titleId} size="huge" as="h2" className={`section__title section__title--${activeTab}`}>
+        {getActiveTitle()}
+      </Title>
 
       {activeTab === 'projects' && (
         <ProjectsContainer 
           role="list"
           aria-label={`${projects.length} featured projects`}
+          className="section__projects"
         >
           {projects.map((project, index) => (
             <ProjectCard 

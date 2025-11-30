@@ -7,6 +7,7 @@ export interface Project {
   github: string
   date?: string
   codepen?: string
+  link?: string
 }
 
 export interface ProjectsData {

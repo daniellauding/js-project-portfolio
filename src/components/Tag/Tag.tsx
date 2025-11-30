@@ -8,9 +8,11 @@ export const Tag = ({
   onClick,
   selected,
   disabled,
+  role,
   ariaDescribedBy,
   ariaPressed,
   ariaSelected,
+  variant = 'default',
 }: TagProps) => {
   return (
     <StyledTag
@@ -18,6 +20,7 @@ export const Tag = ({
       $clickable={!!onClick}
       $selected={selected}
       $disabled={disabled}
+      $variant={variant}
       onClick={disabled ? undefined : onClick}
       onKeyDown={(e) => {
         if (!disabled && onClick && (e.key === 'Enter' || e.key === ' ')) {
@@ -25,7 +28,7 @@ export const Tag = ({
           onClick();
         }
       }}
-      role={onClick ? 'button' : 'listitem'}
+      role={role || (onClick ? 'button' : 'listitem')}
       tabIndex={disabled ? -1 : onClick ? 0 : undefined}
       aria-label={typeof children === 'string' ? children : undefined}
       aria-pressed={ariaPressed}
@@ -33,7 +36,7 @@ export const Tag = ({
       aria-disabled={disabled}
       aria-describedby={ariaDescribedBy}
     >
-      <Text size="sm" weight="medium" className="tag__text">
+      <Text size="md" weight="medium" className="tag__text">
         {children}
       </Text>
     </StyledTag>

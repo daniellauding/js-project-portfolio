@@ -1,13 +1,14 @@
 import styled from 'styled-components'
+import { ButtonVariant, ButtonSize } from './Button.types'
 
-type StyledProps = {
-  $variant?: string
-  $size?: string
+interface StyledButtonProps {
+  $variant?: ButtonVariant
+  $size?: ButtonSize
   $fullWidth?: boolean
   $iconOnly?: boolean
 }
 
-export const StyledButton = styled.button<StyledProps>`
+export const StyledButton = styled.button<StyledButtonProps>`
   font-family: ${props => props.theme.fonts.text};
   font-weight: ${props => props.theme.weights.semibold};
   border-radius: var(--radius-sm);
@@ -74,6 +75,30 @@ export const StyledButton = styled.button<StyledProps>`
     }
   `}
 
+  /* Tertiary variant */
+  ${props => props.$variant === 'tertiary' && `
+    background: var(--color-tertiary);
+    color: var(--text-color);
+    border-color: transparent;
+    border-radius: 999px;
+    
+    [data-theme="dark"] & {
+      background: ${props.theme.colors.primary};
+      color: #fff;
+      svg {
+        color: #fff;
+      }
+    }
+    
+    &:hover:not(:disabled) {
+      background: var(--color-primary);
+      color: #fff;
+      svg {
+        color: #fff;
+      }
+    }
+  `}
+
   /* Full width */
   ${props => props.$fullWidth && `
     width: 100%;
@@ -85,6 +110,7 @@ export const StyledButton = styled.button<StyledProps>`
     aspect-ratio: 1;
     width: 48px;
     height: 48px;
+    border-radius: 999px;
   `}
 
   /* === STATES === */
@@ -97,4 +123,46 @@ export const StyledButton = styled.button<StyledProps>`
     outline: 2px solid ${props => props.theme.colors.primary};
     outline-offset: 2px;
   }
+
+  /* === ICON STYLING === */
+  .button__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    /* Icon should follow button height for height, and maintain aspect ratio */
+    svg, img {
+      width: auto;
+      height: 1em; /* Follow text line-height */
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    /* When custom width/height is set via style prop, let icon fill the container */
+    &[style*="width"], &[style*="height"] {
+      width: 100%;
+      height: 100%;
+      
+      svg, img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  /* Icon-only buttons - icon fills the button */
+  ${props => props.$iconOnly && `
+    .button__icon {
+      width: 100%;
+      height: 100%;
+      
+      svg, img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  `}
 `

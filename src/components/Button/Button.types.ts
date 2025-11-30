@@ -1,10 +1,14 @@
-import { ReactNode, MouseEvent } from 'react'
+import { ReactNode, MouseEvent, CSSProperties } from 'react'
 
 export type ButtonSize = 'sm' | 'md' | 'lg'
 
-export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost'
+export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'tertiary'
 
-export type ButtonProps = {
+export type ButtonTarget = '_blank' | '_self' | '_parent' | '_top'
+
+export type ButtonRel = 'noopener' | 'noreferrer' | 'nofollow' | 'noopener noreferrer'
+
+export interface ButtonProps {
   children?: ReactNode
   variant?: ButtonVariant
   size?: ButtonSize
@@ -14,11 +18,12 @@ export type ButtonProps = {
   fullWidth?: boolean
   icon?: ReactNode | string
   iconOnly?: boolean
-  target?: string
+  target?: ButtonTarget | string
   className?: string
-  ariaLabel?: string;
-  ariaDescribedBy?: string;
-  loading?: boolean;
-  rel?: string;
-  iconColor?: string;
+  ariaLabel?: string
+  ariaDescribedBy?: string
+  loading?: boolean
+  rel?: ButtonRel | string
+  iconColor?: string
+  style?: CSSProperties
 }

@@ -30,7 +30,7 @@ export const SocialLinks = styled.ul`
 `
 
 export const FooterMarquee = styled.div`
-  background: var(--color-secondary);
+  background: var(--bg-marquee);
   color: var(--bg-color);
   padding: var(--spacing-md) 0;
   overflow: hidden;

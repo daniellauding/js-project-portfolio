@@ -1,12 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledSkipLink = styled.a`
-  /* Hidden by default */
   position: absolute;
-  top: -40px;
-  left: var(--spacing-sm);
-  
-  /* Styling */
+  left: -9999px;
+  top: auto;
   background-color: var(--title-color);
   color: var(--bg-color);
   padding: var(--spacing-sm) var(--spacing-md);
@@ -16,24 +13,27 @@ export const StyledSkipLink = styled.a`
   font-weight: var(--weight-semibold);
   text-decoration: none;
   white-space: nowrap;
-  
-  /* High z-index to appear above everything */
   z-index: 9999;
-  
-  /* Smooth animation */
   transition: top 0.2s ease-in-out;
-  
-  /* Show when focused */
-  &:focus {
-    top: var(--spacing-sm);
-  }
-  
-  /* Hover state when visible */
-  &:focus:hover {
-    opacity: 0.9;
-  }
-  &:focus-visible {
-    outline: 2px solid ${props => props.theme.colors.primary};
+  &:focus, 
+  &:focus-within,
+  &:active {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: nowrap;
+    z-index: 999999;
+    padding: 12px 24px;
+    background: var(--title-color);
+    color: var(--bg-color);
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    outline: 3px solid var(--color-primary);
     outline-offset: 2px;
   }
 `;

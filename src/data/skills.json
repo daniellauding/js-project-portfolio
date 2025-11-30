@@ -1,7 +1,7 @@
 {
   "skills": [
     {
-      "category": "Frontend & Frameworks",
+      "category": "Code",
       "items": [
         "React.js",
         "React Native",
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "category": "Design & UX",
+      "category": "UX & UI",
       "items": [
         "Product Design",
         "UI/UX Design",
@@ -44,27 +44,21 @@
       "category": "Backend & Tools",
       "items": [
         "Node.js",
-        "Express",
         "Supabase",
-        "MongoDB",
         "PostgreSQL",
         "REST APIs",
         "GraphQL",
         "WordPress",
         "Headless CMS",
-        "EPiServer",
-        "Polopoly CMS",
         "Git/GitHub",
         "Docker",
         "Vite",
-        "Webpack",
         "DNS Management",
-        "Hosting Services",
-        "Google APIs"
+        "Hosting Services"
       ]
     },
     {
-      "category": "AI & Innovation",
+      "category": "Innovation",
       "items": [
         "AI-assisted Development",
         "Cursor AI",

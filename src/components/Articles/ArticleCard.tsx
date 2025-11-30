@@ -1,5 +1,6 @@
-import { Icon } from '@/components/Icon'
 import { Text, Title } from '@/components/Typography'
+import { Button } from '@/components/Button'
+import { useTheme } from '@/contexts/ThemeContext'
 import { ArticleCardProps } from './Articles.types'
 import {
   ArticleCard as Card,
@@ -7,13 +8,12 @@ import {
   StyledImage,
   ArticleContent,
   ArticleDate,
-  ArticleTitle,
-  ArticleExcerpt,
-  ArticleFooter,
-  ArticleLink
+  ArticleFooter
 } from './Articles.styled'
 
-export const ArticleCard = ({ article, ...props }: ArticleCardProps) => {
+export const ArticleCard = ({ article, role, ...props }: ArticleCardProps) => {
+  const { theme } = useTheme()
+  
   if (!article) return null
 
   const { title, excerpt, date, image, link } = article
@@ -30,7 +30,7 @@ export const ArticleCard = ({ article, ...props }: ArticleCardProps) => {
   }
 
   return (
-    <Card className="article-card" role="row" {...props}>
+    <Card className="article-card" role={role} {...props}>
       {image && (
         <ArticleImage className="article-card__media">
           <StyledImage
@@ -43,14 +43,14 @@ export const ArticleCard = ({ article, ...props }: ArticleCardProps) => {
       <ArticleContent className="article-card__content">
         {date && (
           <ArticleDate className="article-card__date">
-            <Text size="sm" color="#fff" weight="light" className="article-card__date-text">
+            <Text size="md" color="#fff" weight="light" className="article-card__date-text">
               {formatDate(date)}
             </Text>
           </ArticleDate>
         )}
         
         {title && (
-          <Title size="md" weight="semibold" className="article-card__title" color="#000000" as="h3">
+          <Title size="md" weight="semibold" className="article-card__title" color={theme === 'dark' ? '#fff' : '#000'} as="h3">
             {title}
           </Title>
         )}
@@ -64,13 +64,15 @@ export const ArticleCard = ({ article, ...props }: ArticleCardProps) => {
       </ArticleContent>
       <ArticleFooter>        
         {link && (
-          <ArticleLink 
+          <Button
             href={link}
-            aria-label={`Read article: ${title}`}
+            variant="tertiary"
+            size="lg"
+            icon="Doc"
+            ariaLabel={`Read article: ${title}`}
           >
-            <Icon name="Doc" />
             Read article
-          </ArticleLink>
+          </Button>
         )}
       </ArticleFooter>
     </Card>

@@ -1,6 +1,7 @@
-import { Icon } from '@/components/Icon'
 import { Text, Title } from '@/components/Typography'
 import { Tag } from '@/components/Tag/Tag'
+import { Button } from '@/components/Button'
+import { useTheme } from '@/contexts/ThemeContext'
 import { ProjectCardProps } from './Projects.types'
 import {
   ProjectCard as Card,
@@ -9,13 +10,15 @@ import {
   ProjectContent,
   ProjectTags,
   ProjectActions,
-  ProjectLink
+  ProjectDateBadge
 } from './Projects.styled'
 
 export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
   if (!project) return null
 
-  const { name, description, image, tags, netlify, github, date } = project
+  const { theme } = useTheme()
+
+  const { name, description, image, tags, netlify, github, date, link, codepen } = project
 
   const hasContent = name || description || image
   if (!hasContent) return null
@@ -32,27 +35,20 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
         </ProjectImage>
       )}
       <ProjectContent className="project-card__content">
+        {date && (
+          <ProjectDateBadge>
+            <Text size="sm" weight="normal" className="article-card__date-text">
+              {date}
+            </Text>
+          </ProjectDateBadge>
+        )}
         {name && (
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '0.5rem' }}>
-            <Title size="md" weight="semibold" className="project-card__title" color="#000000" as="h3" style={{ margin: 0 }}>
-              {name}
-            </Title>
-            {date && (
-              <span style={{
-                padding: '0.25rem 0.625rem',
-                fontSize: '0.75rem',
-                borderRadius: '12px',
-                backgroundColor: '#f0f0f0',
-                color: '#666',
-                fontWeight: '500'
-              }}>
-                {date}
-              </span>
-            )}
-          </div>
+          <Title size="md" weight="semibold" className="project-card__title" color={theme === 'dark' ? '#fff' : '#000'} as="h3" style={{ margin: 0 }}>
+            {name}
+          </Title>
         )}
         {description && (
-           <Text size="lg" weight="light" className="project-card__desc">
+           <Text size="lg" weight="normal" className="project-card__desc">
             {description}
            </Text>
         )}
@@ -65,6 +61,8 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
             {tags.map((tag, index) => (
               <Tag 
                 key={index} 
+                role="listitem"
+                aria-label={tag}
                 className="project-card__tag"
               >
                 {tag}
@@ -72,29 +70,60 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
             ))}
           </ProjectTags>
         )}
-        {(netlify || github) && (
+        {(netlify || github || link || codepen) && (
           <ProjectActions aria-label="Project links">
             {netlify && (
-              <ProjectLink 
+              <Button
                 href={netlify} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                aria-label={`View live demo of ${name || 'project'} (opens in new tab)`}
+                variant="tertiary"
+                size="lg"
+                icon="Globe"
+                ariaLabel={`View live demo of ${name || 'project'} (opens in new tab)`}
+                className="project-card__button project-card__button--netlify"
               >
-                <Icon name="Globe" aria-hidden="true" />
                 Live demo
-              </ProjectLink>
+              </Button>
             )}
             {github && (
-              <ProjectLink 
+              <Button
                 href={github} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                aria-label={`View source code for ${name || 'project'} (opens in new tab)`}
+                variant="tertiary"
+                size="lg"
+                icon="Github"
+                ariaLabel={`View source code for ${name || 'project'} (opens in new tab)`}
+                className="project-card__button project-card__button--github"
               >
-                <Icon name="Github" aria-hidden="true" />
                 View the code
-              </ProjectLink>
+              </Button>
+            )}
+            {link && (
+              <Button
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="tertiary"
+                size="lg"
+                icon="External"
+                ariaLabel={`View project: ${name || 'project'} (opens in new tab)`}
+              >
+                View project
+              </Button>
+            )}
+            {codepen && (
+              <Button
+                href={codepen}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="tertiary"
+                size="lg"
+                icon="External"
+              >
+                View on CodePen
+              </Button>
             )}
           </ProjectActions>
         )}

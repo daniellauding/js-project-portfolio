@@ -34,6 +34,7 @@ export const TechStack = ({ data }: TechStackProps) => {
         <Text 
           size="huge" 
           className="section__text section__desc section__desc--tech"
+          weight='semibold'
         >
           {desc}
         </Text>

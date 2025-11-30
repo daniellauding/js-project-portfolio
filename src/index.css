@@ -7,42 +7,52 @@
   --text-font-family: 'Hind', sans-serif;
 
   /* === BRAND === */
-  --color-primary: #0B24F5;
-  --color-secondary: #FF4575;
-  --color-tertiary: #0B24F5;
-  --color-icon: #6B7280;
+  --color-primary: #36816B;
+  --color-secondary: #D36755;
+  --color-tertiary: #F5F5F5;
+  --color-icon: #333333;
   
   /* === BASE COLORS === */
   --bg-color: #ffffff;
-  --title-color: #0B24F5;
+  --title-color: #36816B;
   --text-color: #1F2937;
   --text-muted: #6B7280;
   --border-color: #E5E7EB;
   --card-bg: #ffffff;
   --card-shadow: rgba(0, 0, 0, 0.1);
+
+  --chip-bg-default: #f8f9fa;
+  --chip-bg-active: #E4D476;
+  --chip-bg-hover: var(--chip-bg-active);
   
+  --tag-bg-color: var(--text-color);
+  --tag-border-color: var(--border-color);
+  --tag-text-color: #fff;
+
+  --bg-marquee: var(--color-secondary);
+
   /* === SECTION: HERO === */
   --section-hero-bg-color: var(--bg-color);
   --section-hero-title-color: var(--title-color);
   --section-hero-text-color: var(--text-color);
 
   /* === SECTION: TECH === */
-  --section-tech-bg-color: #0B24F5;
-  --section-tech-title-color: #ffffff;
-  --section-tech-text-color: #ffffff;
+  --section-tech-bg-color: #E6DAC0;
+  --section-tech-title-color: var(--title-color);
+  --section-tech-text-color: var(--text-color);
 
   /* === SECTION: PROJECTS === */
   --section-projects-bg-color: #ffffff;
-  --section-projects-title-color: #0B24F5;
+  --section-projects-title-color: var(--title-color);
   --section-projects-text-color: var(--text-color);
 
   /* === SECTION: ARTICLES === */
-  --section-articles-bg-color: #FFECEA;
-  --section-articles-title-color: #FF4575;
+  --section-articles-bg-color: #BFD9D1;
+  --section-articles-title-color: #139069;
   --section-articles-text-color: var(--text-color);
 
   /* === SECTION: SKILLS === */
-  --section-skills-bg-color: #0B24F5;
+  --section-skills-bg-color: #6B5632;
   --section-skills-title-color: #ffffff;
   --section-skills-text-color: #ffffff;
 
@@ -88,7 +98,7 @@
   --spacing-lg: 24px;
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
-  --spacing-huge: 124px;
+  --spacing-huge: 128px;
 
   /* === BORDER RADIUS === */
   --radius-sm: 4px;
@@ -100,52 +110,62 @@
 /* === DARK THEME === */
 [data-theme="dark"] {
   /* === BRAND === */
-  --color-primary: #5B70FF;
-  --color-secondary: #FF6B8F;
-  --color-tertiary: #5B70FF;
+  --color-primary: #36816b;
+  --color-secondary: #D36755;
+  --color-tertiary: #F5F5F5;
   --color-icon: #9CA3AF;
   
   /* === BASE COLORS === */
-  --bg-color: #111827;
-  --title-color: #5B70FF;
+  --bg-color: #0F1714;
+  --title-color: #36816b;
   --text-color: #E5E7EB;
   --text-muted: #9CA3AF;
   --border-color: #374151;
-  --card-bg: #1F2937;
+  --card-bg: transparent;
   --card-shadow: rgba(0, 0, 0, 0.3);
-  
+
+  --chip-bg-default: rgba(255, 255, 255, 0.05);
+  --chip-bg-active: rgba(255, 255, 255, 0.3);
+  --chip-bg-hover: var(--chip-bg-active);
+
+  --tag-bg-color: rgba(255, 255, 255, 0.05);
+  --tag-border-color: rgba(255, 255, 255, 0.05);
+  --tag-text-color: #fff;
+
+  --bg-marquee: var(--color-primary);
+
   /* === SECTION: HERO === */
   --section-hero-bg-color: var(--bg-color);
   --section-hero-title-color: var(--title-color);
   --section-hero-text-color: var(--text-color);
 
   /* === SECTION: TECH === */
-  --section-tech-bg-color: #1E3A8A;
-  --section-tech-title-color: #E5E7EB;
-  --section-tech-text-color: #E5E7EB;
+  --section-tech-bg-color: var(--bg-color);
+  --section-tech-title-color: var(--title-color);
+  --section-tech-text-color: var(--text-color);
 
   /* === SECTION: PROJECTS === */
-  --section-projects-bg-color: #111827;
-  --section-projects-title-color: #5B70FF;
+  --section-projects-bg-color: var(--bg-color);
+  --section-projects-title-color: var(--title-color);
   --section-projects-text-color: var(--text-color);
 
   /* === SECTION: ARTICLES === */
-  --section-articles-bg-color: #2D1B1F;
-  --section-articles-title-color: #FF6B8F;
+  --section-articles-bg-color: var(--bg-color);
+  --section-articles-title-color: var(--title-color);
   --section-articles-text-color: var(--text-color);
 
   /* === SECTION: SKILLS === */
-  --section-skills-bg-color: #1E3A8A;
-  --section-skills-title-color: #E5E7EB;
-  --section-skills-text-color: #E5E7EB;
+  --section-skills-bg-color: var(--bg-color);
+  --section-skills-title-color: var(--title-color);
+  --section-skills-text-color: var(--text-color);
 
   /* === SECTION: FOOTER === */
-  --section-footer-bg-color: #111827;
+  --section-footer-bg-color: var(--bg-color);
   --section-footer-title-color: var(--title-color);
   --section-footer-text-color: var(--text-color);
 
   /* === SECTION: CV === */
-  --section-cv-bg-color: #1F2937;
+  --section-cv-bg-color: var(--bg-color);
   --section-cv-title-color: var(--title-color);
   --section-cv-text-color: var(--text-color);
 }
@@ -194,6 +214,11 @@
     --text-xxl: 18px;
     --text-huge: 24px;
   }
+}
+
+::selection {
+  background: rgba(19, 144, 105, 0.15);
+  color: var(--title-color);
 }
 
 /* === GLOBAL STYLES === */
@@ -249,3 +274,4 @@ body {
 a:hover.icon, a:hover.icon span {
   color: var(--title-color);
 }
+

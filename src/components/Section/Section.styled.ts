@@ -49,7 +49,20 @@ type StyledProps = {
 
 export const StyledSection = styled.section<StyledProps>`
   width: 100%;
-  padding: 40px 20px;
+  padding: var(--spacing-xl) var(--spacing-xl);
+
+  &.section--cv {
+    padding: 0;
+  }
+
+  ${props => props.theme.media.desktop} {
+    padding: var(--spacing-xl) var(--spacing-xl);
+  }
+
+  ${props => props.theme.media.desktop} {
+    padding: var(--spacing-huge) 20px;
+  }
+  
   background: ${props =>
     variants[props.$variant as keyof typeof variants]?.bg || variants.default.bg};
   position: relative;
@@ -81,15 +94,21 @@ export const StyledSection = styled.section<StyledProps>`
     &::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: -5px;
       left: 0;
       right: 0;
       height: 11px;
-      background-image: url("data:image/svg+xml,%3Csvg width='175' height='11' viewBox='0 0 175 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.198 5.2453C8.07066 2.25157 13.7979 2.25157 18.3796 5.2453C22.9614 8.23904 28.6886 8.23904 35.5613 5.2453C42.434 2.25157 48.1612 2.25157 52.7429 5.2453C57.3247 8.23904 63.0519 8.23904 69.9246 5.2453C76.7973 2.25157 82.5245 2.25157 87.1062 5.2453C91.688 8.23904 97.4152 8.23904 104.288 5.2453C111.161 2.25157 116.888 2.25157 121.47 5.2453C126.051 8.23904 131.779 8.23904 138.651 5.2453C145.524 2.25157 151.251 2.25157 155.833 5.2453C160.415 8.23904 166.142 8.23904 173.014 5.2453' stroke='%23FF4575' stroke-width='5.99997'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='175' height='11' viewBox='0 0 175 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M137.453 2.49477C144.875 -0.738314 151.752 -1.00455 157.474 2.73403C160.915 4.98284 167.89 5.24901 174.213 2.49477V7.99575C166.791 11.2288 159.914 11.4949 154.192 7.75649C150.751 5.50764 146.173 5.24137 139.85 7.99575C132.428 11.2288 125.551 11.4949 119.829 7.75649C116.387 5.50764 111.809 5.24137 105.486 7.99575C98.0643 11.2288 91.1875 11.4949 85.4658 7.75649C82.0241 5.50764 77.4462 5.24137 71.123 7.99575C63.701 11.2288 56.8243 11.4949 51.1025 7.75649C47.6608 5.50764 43.0829 5.24137 36.7598 7.99575C29.3377 11.2288 22.461 11.4949 16.7393 7.75649C13.2975 5.50764 6.32316 5.24137 0 7.99575V2.49477C7.42215 -0.738323 14.2987 -1.00459 20.0205 2.73403C23.4622 4.98285 28.0402 5.24904 34.3633 2.49477C41.7854 -0.738321 48.662 -1.00458 54.3838 2.73403C57.8255 4.98285 62.4035 5.24903 68.7266 2.49477C76.1487 -0.738319 83.0253 -1.00457 88.7471 2.73403C92.1888 4.98285 96.7668 5.24903 103.09 2.49477C110.512 -0.738316 117.389 -1.00456 123.11 2.73403C126.552 4.98284 131.13 5.24902 137.453 2.49477Z' fill='%2357B99B'/%3E%3C/svg%3E");
       background-repeat: repeat-x;
-      background-size: auto 11px;
-      background-position: top center;
+      background-size: 175px 11px;
+      background-position: 0 top;
       pointer-events: none;
+    }
+    
+    [data-theme="dark"] & {
+      &::before {
+        display: none;
+      }
     }
   `}
 `
@@ -103,7 +122,7 @@ export const Container = styled.div<StyledProps>`
   gap: var(--spacing-md);
   
   ${props => props.theme.media.desktop} {
-    gap: var(--spacing-${props => props.$gap || 'xxl'});
+    gap: var(--spacing-xxl);
     flex-direction: ${props => props.$flexDirection || 'column'};
   }
 

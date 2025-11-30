@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const SkillsGrid = styled.div`
   display: grid;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-xxl);
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -21,34 +21,25 @@ export const SkillCategory = styled.div`
 `
 
 export const CategoryHeader = styled.div`
-  padding: var(--spacing-sm) var(--spacing-md);
+  // padding: var(--spacing-sm) var(--spacing-md);
   margin-bottom: var(--spacing-lg);
   border-radius: var(--radius-sm);
   
-  &.code {
-    background: var(--color-secondary);
-  }
+  // &.code {
+  //   background: var(--color-secondary);
+  // }
   
-  &.toolbox {
-    background: var(--color-primary);
-  }
+  // &.toolbox {
+  //   background: var(--color-primary);
+  // }
   
-  &.upcoming {
-    background: var(--color-tertiary);
-  }
+  // &.upcoming {
+  //   background: var(--color-tertiary);
+  // }
   
-  &.more {
-    background: var(--color-secondary);
-  }
-`
-
-export const CategoryTitle = styled.h3`
-  font-family: var(--title-font-family);
-  font-size: var(--title-sm);
-  font-weight: var(--weight-bold);
-  color: var(--bg-color);
-  margin: 0;
-  text-transform: capitalize;
+  // &.more {
+  //   background: var(--color-secondary);
+  // }
 `
 
 export const SkillsList = styled.ul`

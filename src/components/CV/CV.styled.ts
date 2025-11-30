@@ -1,14 +1,54 @@
 import styled from 'styled-components'
 
 export const CVContainer = styled.div`
-  max-width: 800px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  // padding: 0 var(--spacing-lg);
 
-  h3 {
+  .cv__title {
     margin-top: var(--spacing-xxl);
     margin-bottom: var(--spacing-lg);
     color: var(--title-color);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .cv__company-link,
+  .cv__school-link {
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all 0.2s ease;
+    border-radius: var(--radius-xs);
+    position: relative;
+
+    &:hover {
+      color: ${props => props.theme.colors.primary};
+      text-decoration: underline;
+      text-decoration-color: ${props => props.theme.colors.primary};
+      text-underline-offset: 3px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid ${props => props.theme.colors.primary};
+      outline-offset: 2px;
+    }
+
+    &::after {
+      content: '↗';
+      font-size: 0.75em;
+      opacity: 0.6;
+      margin-left: 2px;
+      transition: all 0.2s ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      transform: translateX(1px) translateY(-1px);
+    }
   }
 `
 
@@ -22,47 +62,14 @@ export const ExperienceItem = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xs);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-xl);
 
-  &:last-child {
-    border-bottom: none;
-  }
-
-  ${props => props.theme.media.tablet} {
-    grid-template-columns: 200px 1fr;
-    gap: var(--spacing-md);
+  ${props => props.theme.media.desktop} {
+    grid-template-columns: 180px 1fr;
+    grid-column-gap: var(--spacing-huge);
   }
 `
 
-export const Company = styled.div`
-  font-family: var(--title-font-family);
-  font-weight: var(--weight-semibold);
-  font-size: var(--text-lg);
-  color: var(--text-color);
-`
-
-export const Role = styled.div`
-  font-family: var(--text-font-family);
-  font-weight: var(--weight-medium);
-  font-size: var(--text-md);
-  color: var(--title-color);
-  margin-bottom: var(--spacing-xs);
-`
-
-export const Period = styled.div`
-  font-family: var(--text-font-family);
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  margin-bottom: var(--spacing-xs);
-`
-
-export const Description = styled.div`
-  font-family: var(--text-font-family);
-  font-size: var(--text-md);
-  color: var(--text-color);
-  line-height: 1.6;
-`
 
 export const EducationList = styled.div`
   display: flex;
@@ -74,33 +81,14 @@ export const EducationItem = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xs);
-  padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-xl);
 
-  &:last-child {
-    border-bottom: none;
-  }
-
-  ${props => props.theme.media.tablet} {
-    grid-template-columns: 200px 1fr;
-    gap: var(--spacing-md);
+  ${props => props.theme.media.desktop} {
+    grid-template-columns: 180px 1fr;
+    grid-column-gap: var(--spacing-huge);
   }
 `
 
-export const School = styled.div`
-  font-family: var(--title-font-family);
-  font-weight: var(--weight-semibold);
-  font-size: var(--text-lg);
-  color: var(--text-color);
-`
-
-export const Program = styled.div`
-  font-family: var(--text-font-family);
-  font-weight: var(--weight-medium);
-  font-size: var(--text-md);
-  color: var(--title-color);
-  margin-bottom: var(--spacing-xs);
-`
 
 export const LinksContainer = styled.div`
   display: flex;
@@ -114,46 +102,9 @@ export const LinksContainer = styled.div`
   }
 `
 
-export const LinkItem = styled.a`
-  font-family: var(--text-font-family);
-  font-size: var(--text-lg);
-  font-weight: var(--weight-medium);
-  color: var(--title-color);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
 
-  &:hover {
-    opacity: 0.7;
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--title-color);
-    outline-offset: 4px;
-    border-radius: var(--radius-sm);
-  }
-`
-
-export const ShowMoreButton = styled.button`
-  background: none;
-  border: 2px solid var(--title-color);
-  color: var(--title-color);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--radius-sm);
-  font-family: var(--text-font-family);
-  font-size: var(--text-md);
-  font-weight: var(--weight-medium);
-  cursor: pointer;
-  margin: var(--spacing-lg) auto;
-  display: block;
-  transition: all 0.2s ease;
-
-  &:hover {
-    background: var(--title-color);
-    color: var(--bg-color);
-  }
-
-  &:focus-visible {
-    outline: 2px solid var(--title-color);
-    outline-offset: 4px;
-  }
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: var(--spacing-lg) 0;
 `

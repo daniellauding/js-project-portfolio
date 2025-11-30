@@ -7,14 +7,27 @@ export const ProjectsContainer = styled.div`
   gap: var(--spacing-xl);
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: 0 0;
+  margin: var(--spacing-md) auto 0 auto;
 
   ${props => props.theme.media.tablet} {
   }
 
   ${props => props.theme.media.desktop} {
+    margin: var(--spacing-huge) auto 0 auto;
   }
+`
+
+export const TabsContainer = styled.div`
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+`
+
+export const ProjectDateBadge = styled.span`
+  padding: 0px;
+  width: fit-content;
 `
 
 export const ProjectCard = styled.article`
@@ -23,23 +36,24 @@ export const ProjectCard = styled.article`
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
-  flex-direction: row;
-  box-shadow: 0 2px 8px var(--card-shadow);
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px var(--card-shadow);
+  flex-direction: column;
+  ${props => props.theme.media.desktop} {
+    flex-direction: row;
   }
 `
 
 export const ProjectImage = styled.div`
   position: relative;
-  width: 408px;
-  max-width: 408px;
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 408 / 280;
   overflow: hidden;
-  border-left: 20px solid var(--section-projects-title-color);
-  border-bottom: 20px solid var(--section-projects-title-color);
+  border-left: 20px solid #E6DAC0;
+  border-bottom: 20px solid #E6DAC0;
+  ${props => props.theme.media.desktop} {
+    width: 408px;
+    max-width: 408px;
+  }
 `
 
 export const StyledImage = styled(Image)`
@@ -50,28 +64,15 @@ export const StyledImage = styled(Image)`
 `;
 
 export const ProjectContent = styled.div`
-  padding: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
   flex: 1;
+  gap: var(--spacing-md);
   display: flex;
   flex-direction: column;
+  ${props => props.theme.media.desktop} {
+    padding: 0 var(--spacing-xl);
+  }
 `
-
-// export const ProjectTitle = styled.h3`
-//   font-family: var(--title-font-family);
-//   font-size: var(--title-sm);
-//   font-weight: var(--weight-bold);
-//   color: var(--text-color) !important;
-//   margin: 0 0 var(--spacing-md) 0;
-// `
-
-// export const ProjectDescription = styled.p`
-//   font-family: var(--text-font-family);
-//   font-size: var(--text-md);
-//   color: var(--text-color);
-//   line-height: 1.6;
-//   margin: 0 0 var(--spacing-lg) 0;
-//   flex: 1;
-// `
 
 export const ProjectTags = styled.div`
   display: flex;

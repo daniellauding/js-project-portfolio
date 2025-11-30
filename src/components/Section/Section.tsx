@@ -41,32 +41,60 @@ export const Section = ({
       return () => clearTimeout(timer)
     }
 
+    // Check if section is already visible on mount (common on mobile)
+    const checkInitialVisibility = () => {
+      if (!sectionRef.current) return false
+      const rect = sectionRef.current.getBoundingClientRect()
+      const viewportHeight = window.innerHeight
+      // Check if section is in viewport
+      return rect.top < viewportHeight && rect.bottom > 0
+    }
+
+    const triggerAnimation = (element: HTMLElement) => {
+      element.classList.add('animate__animated', `animate__${animationType}`)
+      if (animationDelay > 0) {
+        element.style.setProperty('--animate-delay', `${animationDelay}s`)
+      }
+    }
+
+    // If already visible, animate immediately (mobile fallback)
+    if (sectionRef.current && checkInitialVisibility()) {
+      const timer = setTimeout(() => {
+        if (sectionRef.current) {
+          triggerAnimation(sectionRef.current)
+        }
+      }, 150)
+      return () => clearTimeout(timer)
+    }
+
+    // Set up Intersection Observer for scroll-triggered animations
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target instanceof HTMLElement) {
-            entry.target.classList.add('animate__animated', `animate__${animationType}`)
-            if (animationDelay > 0) {
-              entry.target.style.setProperty('--animate-delay', `${animationDelay}s`)
-            }
+            triggerAnimation(entry.target)
             observer.unobserve(entry.target)
           }
         })
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px',
+        // More lenient for mobile - trigger when any part is visible
+        threshold: 0,
+        // Smaller rootMargin for mobile to trigger earlier
+        rootMargin: '0px 0px -30px 0px',
       }
     )
 
-    observer.observe(sectionRef.current)
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
 
     return () => {
       if (sectionRef.current) {
         observer.unobserve(sectionRef.current)
       }
     }
-  }, [animate, animationType, variant])
+  }, [animate, animationType, variant, animationDelay])
 
   const bemClass = `section ${variant ? `section--${variant}` : ''} ${layout ? `section--${layout}` : ''}`.trim()
   const fullClassName = `${bemClass} ${className}`.trim()

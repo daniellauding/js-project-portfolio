@@ -1,5 +1,5 @@
 import { Avatar } from '@/components/Image'
-import { Text } from '@/components/Typography'
+import { Text, Title } from '@/components/Typography'
 import { useTheme } from '@/contexts/ThemeContext'
 import { Section } from '@/components/Section'
 import { FooterProps } from './Footer.types'
@@ -51,29 +51,29 @@ export const Footer = ({ data }: FooterProps) => {
         
         <ContactInfo className="section__contact">
           {name && (
-            <Text size="huge" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__name">{name}</Text>
+            <Title as="h3" size="md" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__name">{name}</Title>
           )}
 
           {phone && (
-            <Text size="huge" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__phone">
+            <Title as="h3" size="md" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__phone">
               <ContactLink 
                 href={`tel:${phone}`}
                 aria-label={`Call ${phone}`}
               >
                 {phone}
               </ContactLink>
-            </Text>
+            </Title>
           )}
 
           {email && (
-            <Text size="huge" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__email">
+            <Title as="h3" size="md" weight="semibold" align="center" color={theme === 'dark' ? '#fff' : '#000'}  className="section__email">
               <ContactLink 
                 href={`mailto:${email}`}
                 aria-label={`Email ${email}`}
               >
                 {email}
               </ContactLink>  
-            </Text>
+            </Title>
           )}
         </ContactInfo>
 

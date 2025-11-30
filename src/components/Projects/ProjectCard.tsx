@@ -121,6 +121,7 @@ export const ProjectCard = ({ project, ...props }: ProjectCardProps) => {
                 variant="tertiary"
                 size="lg"
                 icon="External"
+                ariaLabel={`View ${name || 'project'} on CodePen (opens in new tab)`}
               >
                 View on CodePen
               </Button>

@@ -44,6 +44,7 @@ export const Hero = ({ data }: HeroProps) => {
         size="lg"
         style={{width: '90px', height: '90px', marginLeft: '-16px', marginRight: 'auto' }}
         iconOnly
+        ariaLabel="Go to homepage"
       />
 
       <HeroGrid>

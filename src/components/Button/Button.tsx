@@ -79,6 +79,11 @@ export const Button: FC<ButtonProps> = ({
   )
 
   if (href) {
+    // Ensure icon-only links always have accessible text
+    const accessibleLabel = iconOnly && !ariaLabel 
+      ? (typeof icon === 'string' ? `${icon} link` : 'Link')
+      : ariaLabel
+
     return (
       <StyledButton
         as="a"
@@ -91,7 +96,7 @@ export const Button: FC<ButtonProps> = ({
         className={fullClassName}
         rel={rel}
         style={style}
-        aria-label={ariaLabel}
+        aria-label={accessibleLabel}
         aria-describedby={ariaDescribedBy}
         aria-busy={loading}
       >

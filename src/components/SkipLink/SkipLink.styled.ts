@@ -2,19 +2,25 @@ import styled from 'styled-components';
 
 export const StyledSkipLink = styled.a`
   position: absolute;
-  left: -9999px;
-  top: auto;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
   background-color: var(--title-color);
   color: var(--bg-color);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--radius-sm);
   font-family: var(--text-font-family);
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
   text-decoration: none;
-  white-space: nowrap;
   z-index: 9999;
-  transition: top 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  
   &:focus, 
   &:focus-within,
   &:active {
@@ -23,11 +29,12 @@ export const StyledSkipLink = styled.a`
     left: 10px;
     width: auto;
     height: auto;
+    padding: 12px 24px;
+    margin: 0;
     overflow: visible;
     clip: auto;
     white-space: nowrap;
     z-index: 999999;
-    padding: 12px 24px;
     background: var(--title-color);
     color: var(--bg-color);
     text-decoration: none;

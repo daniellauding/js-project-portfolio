@@ -1,14 +1,21 @@
-# 🌟 Portfolio Website
+# 🌟 Frontend Portfolio Website
 
 ## 🔗 Live Site
 
 **[technigo.daniellauding.se](https://technigo.daniellauding.se)**
 
+> This is my **Technigo frontend development portfolio** showcasing my JavaScript and React skills.
+
 ---
 
 ## 👋 About
 
-Hi! I'm Daniel, and this is my portfolio website where I show off my projects and tell you about myself!
+Hi! I'm Daniel, and this is my **Technigo frontend portfolio** where I show off my projects and tell you about myself!
+
+### Other Portfolios
+
+- **🎨 Design Portfolio:** [daniellauding.se](https://www.daniellauding.se) - My main design portfolio
+- **📐 Recent Projects (Figma):** [View in Figma](https://www.figma.com/proto/ITcLm3ciPq4G5qkKP6q1d9/instinctly-selected-work?page-id=624%3A457&node-id=624-458&p=f&viewport=-9839%2C-1808%2C0.66&t=aXOv3ONToAEWFkFK-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=624%3A458) - Recent selected work
 
 ---
 

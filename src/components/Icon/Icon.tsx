@@ -16,7 +16,7 @@ export const Icon = ({
 
   if (!iconSvg) {
     if (import.meta.env.DEV) {
-      console.warn(`Icon "${name}" not found`)
+    console.warn(`Icon "${name}" not found`)
     }
     return null
   }

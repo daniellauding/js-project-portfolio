@@ -54,6 +54,15 @@
   - Tomorrow-you will thank today-you for being clear
   - Comments are like sticky notes that explain tricky parts
 
+  📋 Planning with Plotta
+
+  Before building this website, I used [Plotta](https://app.plotta.io) to plan out the entire project! It helped me organize my thoughts, structure the components, and visualize how everything would fit together.
+
+  🔗 **View the Project Plan:** [Plotta Project](https://app.plotta.io/project/43f72570-e844-4280-9865-c3e37dc1f60d)  
+  🔑 **Password:** `technigo`
+
+  Feel free to register and explore the planning process yourself! It's a great tool for organizing complex projects.
+
   🏗️ How I Built This
 
   The Foundation (Like Building a House)

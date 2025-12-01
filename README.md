@@ -1,172 +1,238 @@
-# Portfolio
-🌟 My Portfolio Website
+# 🌟 Portfolio Website
 
-🔗 **Live Site:** [technigo.daniellauding.se](https://technigo.daniellauding.se)
+## 🔗 Live Site
 
-  Hi! I'm Daniel, and this is my portfolio website where I show off my projects and tell you about myself!
+**[technigo.daniellauding.se](https://technigo.daniellauding.se)**
 
-  🎯 What This Website Does
+---
 
-  This is like my digital business card! It shows:
-  - Who I am - A person who loves building websites
-  - What I've built - Cool projects I've made
-  - My thoughts - Things I think about when making websites
-  - How to contact me - So we can chat about making cool stuff together!
+## 👋 About
 
-  🧸 Why I Built My Own Design Library (Like LEGO Blocks!)
+Hi! I'm Daniel, and this is my portfolio website where I show off my projects and tell you about myself!
 
-  You know how LEGO blocks can build anything? I made my own "website LEGO blocks" because:
+---
 
-  🎨 It's Like Having My Own Crayon Box
+## 🎯 What This Website Does
 
-  - Instead of using someone else's colors, I made my own!
-  - Every button, text, and picture looks exactly how I want
-  - It's like having a magic crayon that always draws the same shade of blue
+This is like my digital business card! It shows:
 
-  🔧 Building Blocks That Fit Together
+- **Who I am** - A person who loves building websites
+- **What I've built** - Cool projects I've made
+- **My thoughts** - Things I think about when making websites
+- **How to contact me** - So we can chat about making cool stuff together!
 
-  - I made pieces like <Button>, <Text>, and <Section>
-  - They all work together like puzzle pieces
-  - When I want to change something, I only need to change it in one place!
+---
 
-  🚀 It Makes Building Websites Super Fast
+## 🧸 Why I Built My Own Design Library
 
-  - Instead of drawing a new button every time, I just use my <Button> block
-  - It's like having a stamp instead of writing the same word over and over
+### Like LEGO Blocks!
 
-  💭 My Thoughts About Code
+You know how LEGO blocks can build anything? I made my own "website LEGO blocks" because:
 
-  Code Should Be Like a Good Story
+### 🎨 It's Like Having My Own Crayon Box
 
-  - Easy to read and understand
-  - Each part has a clear purpose
-  - Anyone should be able to follow along
+- Instead of using someone else's colors, I made my own!
+- Every button, text, and picture looks exactly how I want
+- It's like having a magic crayon that always draws the same shade of blue
 
-  Keep Things Simple
+### 🔧 Building Blocks That Fit Together
 
-  - Don't use big fancy words when small ones work
-  - Make one thing do one job really well
-  - Clean up your toys (code) when you're done!
+- I made pieces like `<Button>`, `<Text>`, and `<Section>`
+- They all work together like puzzle pieces
+- When I want to change something, I only need to change it in one place!
 
-  Be Kind to Future You
+### 🚀 It Makes Building Websites Super Fast
 
-  - Write code like you're leaving notes for a friend
-  - Tomorrow-you will thank today-you for being clear
-  - Comments are like sticky notes that explain tricky parts
+- Instead of drawing a new button every time, I just use my `<Button>` block
+- It's like having a stamp instead of writing the same word over and over
 
-  📋 Planning with Plotta
+---
 
-  Before building this website, I used [Plotta](https://app.plotta.io) to plan out the entire project! It helped me organize my thoughts, structure the components, and visualize how everything would fit together.
+## 💭 My Thoughts About Code
 
-  🔗 **View the Project Plan:** [Plotta Project](https://app.plotta.io/project/43f72570-e844-4280-9865-c3e37dc1f60d)  
-  🔑 **Password:** `technigo`
+### Code Should Be Like a Good Story
 
-  Feel free to register and explore the planning process yourself! It's a great tool for organizing complex projects.
+- Easy to read and understand
+- Each part has a clear purpose
+- Anyone should be able to follow along
 
-  🏗️ How I Built This
+### Keep Things Simple
 
-  The Foundation (Like Building a House)
+- Don't use big fancy words when small ones work
+- Make one thing do one job really well
+- Clean up your toys (code) when you're done!
 
-  1. React - The main tool that makes everything work
-  2. TypeScript - Helps catch mistakes before they happen
-  3. Styled Components - Makes everything look pretty
-  4. My Design System - All my LEGO blocks working together
+### Be Kind to Future You
 
-  The Special Features
+- Write code like you're leaving notes for a friend
+- Tomorrow-you will thank today-you for being clear
+- Comments are like sticky notes that explain tricky parts
 
-  - Accessibility First - Everyone can use my website, no matter how they browse
-  - Mobile Friendly - Works great on phones and big computers
-  - Fast Loading - Nobody likes waiting for slow websites!
-  - Dark Mode - Easy on your eyes when browsing at night 🌙
-  - Interactive Design System - Browse all components in the StyleGuide
+---
 
-  🎨 Why Simple Design Works
+## 📋 Planning with Plotta
 
-  Think of your favorite toy. It's probably not the one with a million buttons and lights that confuse you. It's the simple one that just works perfectly.
+Before building this website, I used **[Plotta](https://app.plotta.io)** to plan out the entire project! 
 
-  That's what I did here:
-  - Clean colors that are easy on your eyes
-  - Clear text that's easy to read
-  - Simple navigation so you never get lost
-  - Fast loading because waiting is boring
+### What is Plotta?
 
-  🤝 What Makes Good Code (The Secret Recipe)
+**Plotta is my own project** - a planning tool I created with AI assistance (Claude) that helps organize projects using digital sticky notes. It's like having a virtual whiteboard where you can plan, organize, and visualize complex projects before diving into code.
 
-  Like Organizing Your Room
+### How I Used It
 
-  - Put similar things together
-  - Give everything a clear name
-  - Clean up regularly
-  - Make it easy to find stuff later
+Plotta helped me:
+- **Organize my thoughts** - Structure all the components and features
+- **Visualize the architecture** - See how everything would fit together
+- **Plan the user flow** - Map out the entire user experience
+- **Break down tasks** - Organize development into manageable pieces
 
-  Like Writing a Letter
+### Explore the Planning Process
 
-  - Use clear, simple words
-  - One idea per paragraph (function)
-  - Check your spelling (no bugs!)
-  - Make it nice to read
+🔗 **View the Project Plan:** [Plotta Project](https://app.plotta.io/project/43f72570-e844-4280-9865-c3e37dc1f60d)  
+🔑 **Password:** `technigo`
 
-  Like Being a Good Friend
+> 💡 **Tip:** Feel free to register and explore the planning process yourself! It's a great tool for organizing complex projects, and you can see exactly how I planned this portfolio before building it.
 
-  - Be consistent and reliable
-  - Don't surprise people in bad ways
-  - Help others understand what you're doing
-  - Share your toys (code) with others
+---
 
-  🌱 What I Learned
+## 🏗️ How I Built This
 
-  Building this taught me that:
-  - Small, simple pieces can build amazing things
-  - Planning first saves time later
-  - Making it accessible means everyone can enjoy it
-  - Clean code is like a gift to your future self
+### The Foundation (Like Building a House)
 
-  ## 🚀 Quick Start
+1. **React** - The main tool that makes everything work
+2. **TypeScript** - Helps catch mistakes before they happen
+3. **Styled Components** - Makes everything look pretty
+4. **My Design System** - All my LEGO blocks working together
 
-  ```bash
-  # Install dependencies
-  npm install
+### The Special Features
 
-  # Start development server
-  npm run dev
+- **Accessibility First** - Everyone can use my website, no matter how they browse
+- **Mobile Friendly** - Works great on phones and big computers
+- **Fast Loading** - Nobody likes waiting for slow websites!
+- **Dark Mode** - Easy on your eyes when browsing at night 🌙
+- **Interactive Design System** - Browse all components in the StyleGuide
 
-  # Build for production
-  npm run build
+---
 
-  # Preview production build
-  npm run preview
-  ```
+## 🎨 Why Simple Design Works
 
-  ## 📁 Project Structure
+Think of your favorite toy. It's probably not the one with a million buttons and lights that confuse you. It's the simple one that just works perfectly.
 
-  ```
-  src/
-  ├── components/      # Reusable UI components
-  ├── views/          # Page components
-  ├── styles/         # Global styles and themes
-  ├── utils/          # Helper functions
-  └── data/           # Static data (projects, skills, etc.)
-  ```
+That's what I did here:
 
-  ## 🎨 Features
+- **Clean colors** that are easy on your eyes
+- **Clear text** that's easy to read
+- **Simple navigation** so you never get lost
+- **Fast loading** because waiting is boring
 
-  - **Component-Based Architecture** - Modular, reusable components
-  - **TypeScript** - Type-safe development
-  - **Styled Components** - CSS-in-JS styling
-  - **Dark/Light Theme** - Toggle between themes
-  - **Responsive Design** - Mobile-first approach
-  - **Accessibility** - WCAG 2.1 AA compliant
-  - **SEO Optimized** - Meta tags and semantic HTML
-  - **Performance** - Lazy loading and optimized assets
+---
 
-  ## 🛠 Tech Stack
+## 🤝 What Makes Good Code
 
-  - **React 18** - UI library
-  - **TypeScript** - Type safety
-  - **Vite** - Build tool
-  - **Styled Components** - Styling
-  - **React Router** - Routing
-  - **ESLint & Prettier** - Code quality
+### The Secret Recipe
 
-  ---
-  Made with ❤️ by Daniel - A person who thinks websites should be fast, pretty, and work for everyone!
+#### Like Organizing Your Room
+
+- Put similar things together
+- Give everything a clear name
+- Clean up regularly
+- Make it easy to find stuff later
+
+#### Like Writing a Letter
+
+- Use clear, simple words
+- One idea per paragraph (function)
+- Check your spelling (no bugs!)
+- Make it nice to read
+
+#### Like Being a Good Friend
+
+- Be consistent and reliable
+- Don't surprise people in bad ways
+- Help others understand what you're doing
+- Share your toys (code) with others
+
+---
+
+## 🌱 What I Learned
+
+Building this taught me that:
+
+- Small, simple pieces can build amazing things
+- Planning first saves time later (thanks Plotta!)
+- Making it accessible means everyone can enjoy it
+- Clean code is like a gift to your future self
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── components/      # Reusable UI components
+├── views/          # Page components
+├── styles/         # Global styles and themes
+├── utils/          # Helper functions
+└── data/           # Static data (projects, skills, etc.)
+```
+
+---
+
+## 🎨 Features
+
+- **Component-Based Architecture** - Modular, reusable components
+- **TypeScript** - Type-safe development
+- **Styled Components** - CSS-in-JS styling
+- **Dark/Light Theme** - Toggle between themes
+- **Responsive Design** - Mobile-first approach
+- **Accessibility** - WCAG 2.1 AA compliant
+- **SEO Optimized** - Meta tags and semantic HTML
+- **Performance** - Lazy loading and optimized assets
+- **Scroll Animations** - Smooth fade-in animations with animate.css
+- **Open Graph Tags** - Beautiful social media previews
+
+---
+
+## 🛠 Tech Stack
+
+- **React 18** - UI library
+- **TypeScript** - Type safety
+- **Vite** - Build tool
+- **Styled Components** - Styling
+- **React Router** - Routing
+- **Animate.css** - Scroll animations
+- **ESLint & Prettier** - Code quality
+
+---
+
+## 📝 License
+
+This project is open source and available for learning purposes.
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Daniel**
+
+*A person who thinks websites should be fast, pretty, and work for everyone!*
+
+</div>
